@@ -1,0 +1,7 @@
+interface:
+  display_name: "Academic Paper Writing"
+  short_description: "Plan, draft, revise, and audit academic manuscripts"
+  default_prompt: "Use $academic-paper-writing to map the manuscript spine, evidence chain, and revise this section into a journal-style version."
+
+policy:
+  allow_implicit_invocation: true
