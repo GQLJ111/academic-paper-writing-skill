@@ -6,6 +6,8 @@ This repository provides a Codex skill for **engineering academic paper writing*
 
 The skill is suitable for common engineering manuscript types, including simulation studies, experimental studies, modeling papers, algorithm papers, and applied technical papers. Its purpose is not to replace the author's research judgment, but to help organize a stronger manuscript argument with clearer structure, evidence, and journal-style writing.
 
+In terms of engineering domains, it focuses on mechanical/materials/civil engineering, electrical/control/automation, computer science/AI/algorithms, energy/chemical/environmental engineering, and traffic or automated-vehicle simulation. For other engineering fields, the same logic can be transferred by identifying the research object, variables, metrics, and scope boundaries.
+
 ## 🎯 Who This Is For
 
 This skill is mainly intended for:
@@ -22,6 +24,7 @@ It is not a generic copy-editing tool. It is biased toward **engineering researc
 
 - 🧭 Whole-manuscript planning: research problem, contribution, evidence chain, and section architecture.
 - ✍️ Section drafting and revision: abstract, introduction, methods, results, discussion, conclusions, and more.
+- 🌐 Bilingual writing and translation adaptation: Chinese-to-English journal prose, English-to-Chinese academic prose, terminology preservation, and repair of literal translation artifacts.
 - 📐 Engineering equations and notation: variables, units, metrics, models, constraints, and assumptions.
 - 📊 Figure and table writing logic: avoid visual dumping and connect visuals to manuscript claims.
 - 🔍 Manuscript quality review: repetition, unsupported claims, overclaiming, section-role overlap, and evidence gaps.
@@ -59,6 +62,10 @@ Use $academic-paper-writing to revise this Chinese abstract into a more engineer
 ```
 
 ```text
+Use $academic-paper-writing to translate and restructure this Chinese Results paragraph into natural English journal prose, preserving terms, equation labels, and figure/table numbers while avoiding literal translation and AI-like phrasing.
+```
+
+```text
 Use $academic-paper-writing to rewrite the introduction with a clearer research gap, contribution paragraph, and method logic.
 ```
 
@@ -76,15 +83,13 @@ Use $academic-paper-writing to draft a point-by-point reviewer response with cle
 
 ## 📚 Built-In Reference Modules
 
-The skill separates writing guidance into reference files that Codex can load on demand:
+The skill separates writing guidance into reference files that Codex can load on demand. The main groups are:
 
-- `whole-manuscript-architectures.md`: full-paper structures, IMRaD, thesis-vs-journal conversion, and discussion architecture.
-- `top-journal-section-patterns.md`: title, abstract, introduction, methods, results, discussion, and conclusion patterns.
-- `engineering-empirical-and-simulation-template.md`: a general template for engineering experiment and simulation papers.
-- `engineering-equations-and-notation.md`: formulas, symbols, units, metric definitions, and equation dumping.
-- `results-and-discussion.md`: results, figures, tables, discussion, limitations, and conclusions.
-- `paper-quality-review.md`: whole-manuscript diagnosis and revision priorities.
-- `material-to-journal-revision.md`: converting verbose material drafts into journal-style manuscripts.
+- **Whole-manuscript structure and workflow**: `whole-manuscript-architectures.md`, `writing-workflow.md`, `manuscript-spine-and-audit.md`, `material-to-journal-revision.md`.
+- **Section writing and argument design**: `top-journal-section-patterns.md`, `literature-review.md`, `research-gap-and-contribution.md`, `results-and-discussion.md`, `revision-and-polishing.md`, `target-journal-fit.md`.
+- **Engineering methods and evidence writing**: `engineering-empirical-and-simulation-template.md`, `experiment-methods.md`, `engineering-equations-and-notation.md`, `engineering-domain-examples.md`.
+- **Bilingual writing and terminology control**: `bilingual-writing-rules.md`, `terminology-and-phrases.md`.
+- **Quality review**: `paper-quality-review.md`.
 
 These files are not intended as user-facing documentation. They are context modules for Codex to use when a specific writing task requires them.
 
@@ -108,10 +113,13 @@ skills/academic-paper-writing
 After installation, please remind me to restart Codex.
 ```
 
-If you prefer manual installation, use the Codex skill installer:
+If you prefer manual installation, clone the repository and copy the skill folder into Codex's skills directory. This repository does not include a standalone `install-skill-from-github.py` installer script.
 
 ```powershell
-python install-skill-from-github.py --repo GQLJ111/academic-paper-writing-skill --path skills/academic-paper-writing
+git clone https://github.com/GQLJ111/academic-paper-writing-skill.git
+$skillRoot = Join-Path $env:USERPROFILE ".codex\skills"
+New-Item -ItemType Directory -Force -Path $skillRoot
+Copy-Item -LiteralPath ".\academic-paper-writing-skill\skills\academic-paper-writing" -Destination $skillRoot -Recurse -Force
 ```
 
 After installation, restart Codex so the skill can be picked up.
@@ -129,6 +137,8 @@ skills/academic-paper-writing
 
 Please overwrite the old local version and remind me to restart Codex after installation.
 ```
+
+For a manual update, run `git pull` in the cloned repository and copy `skills/academic-paper-writing` into `~/.codex/skills/` again.
 
 ## 📁 Repository Structure
 

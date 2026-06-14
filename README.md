@@ -6,6 +6,8 @@
 
 它适合仿真研究、实验研究、建模论文、算法论文、工程应用论文等常见工科写作场景。这个 skill 的目标不是替代研究者判断，而是帮助作者把论文写得更有结构、更有证据链、更接近期刊论文的表达方式。
 
+在学科方向上，它重点覆盖机械/材料/土木、电气/控制/自动化、计算机/AI/算法、能源/化工/环境、交通/自动驾驶仿真等工科论文场景。对于未列出的工程方向，也可以按“研究对象-变量-指标-边界”的方式迁移使用。
+
 ## 🎯 适合谁使用
 
 这个 skill 主要面向：
@@ -22,6 +24,7 @@
 
 - 🧭 论文整体结构规划：从研究问题、创新点、证据链到章节安排。
 - ✍️ 章节写作与改写：支持摘要、引言、方法、结果、讨论、结论等部分。
+- 🌐 中英双语写作与互译：支持中文材料转英文期刊表达、英文到中文学术表达、术语保留和直译痕迹修复。
 - 📐 工程公式与符号：辅助定义变量、单位、指标、模型和约束条件。
 - 📊 图表写作逻辑：避免图表堆叠，让图表真正服务论证。
 - 🔍 论文质量审查：检查重复、过度声明、证据不足、章节职责混乱等问题。
@@ -59,6 +62,10 @@
 ```
 
 ```text
+使用 $academic-paper-writing 帮我把这段中文结果描述翻译并重构成自然的英文期刊表达，保留术语、公式编号和图表编号，避免直译和 AI 味。
+```
+
+```text
 使用 $academic-paper-writing 帮我重写引言，要求突出研究空白、本文贡献和方法逻辑。
 ```
 
@@ -76,15 +83,13 @@
 
 ## 📚 内置参考模块
 
-skill 内部把写作知识拆成了多个按需加载的 reference，例如：
+skill 内部把写作知识拆成了多个按需加载的 reference。主要包括：
 
-- `whole-manuscript-architectures.md`：整篇论文结构、IMRaD、讨论章节是否单独设置。
-- `top-journal-section-patterns.md`：标题、摘要、引言、方法、结果、讨论、结论的章节写法。
-- `engineering-empirical-and-simulation-template.md`：工科实验/仿真论文的通用模板。
-- `engineering-equations-and-notation.md`：公式、符号、单位、指标定义和公式堆叠问题。
-- `results-and-discussion.md`：结果、图表、讨论、局限性和结论写法。
-- `paper-quality-review.md`：整篇论文质量审查和修改优先级。
-- `material-to-journal-revision.md`：把材料型初稿压缩成期刊论文。
+- **整篇论文与写作流程**：`whole-manuscript-architectures.md`、`writing-workflow.md`、`manuscript-spine-and-audit.md`、`material-to-journal-revision.md`。
+- **章节写法与论证设计**：`top-journal-section-patterns.md`、`literature-review.md`、`research-gap-and-contribution.md`、`results-and-discussion.md`、`revision-and-polishing.md`、`target-journal-fit.md`。
+- **工科方法与证据表达**：`engineering-empirical-and-simulation-template.md`、`experiment-methods.md`、`engineering-equations-and-notation.md`、`engineering-domain-examples.md`。
+- **双语写作与术语控制**：`bilingual-writing-rules.md`、`terminology-and-phrases.md`。
+- **质量审查**：`paper-quality-review.md`。
 
 这些文件不是让用户手动阅读的，而是让 Codex 在不同论文写作任务中按需调用。
 
@@ -108,10 +113,13 @@ skills/academic-paper-writing
 安装完成后，请提醒我重启 Codex。
 ```
 
-如果你想手动安装，也可以使用 Codex skill installer：
+如果你想手动安装，可以使用 `git clone` 后把 skill 文件夹复制到 Codex 的 skills 目录。仓库不包含独立的 `install-skill-from-github.py` 安装脚本。
 
 ```powershell
-python install-skill-from-github.py --repo GQLJ111/academic-paper-writing-skill --path skills/academic-paper-writing
+git clone https://github.com/GQLJ111/academic-paper-writing-skill.git
+$skillRoot = Join-Path $env:USERPROFILE ".codex\skills"
+New-Item -ItemType Directory -Force -Path $skillRoot
+Copy-Item -LiteralPath ".\academic-paper-writing-skill\skills\academic-paper-writing" -Destination $skillRoot -Recurse -Force
 ```
 
 安装完成后，请重启 Codex 以加载该 skill。
@@ -129,6 +137,8 @@ skills/academic-paper-writing
 
 请覆盖本地旧版本，完成后提醒我重启 Codex。
 ```
+
+如果你是手动安装，可以在克隆目录中执行 `git pull` 后重新复制 `skills/academic-paper-writing` 文件夹到 `~/.codex/skills/`。
 
 ## 📁 仓库结构
 
