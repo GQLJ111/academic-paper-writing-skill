@@ -17,12 +17,14 @@ Synthesis: what remains unresolved and why it matters for this paper
 
 Choose axes that match the paper:
 
-- Research object: behavior, system performance, safety, emissions, control, policy.
-- Method: empirical data, simulation, analytical model, machine learning, optimization, field test.
-- Scenario: freeway, urban network, intersection, bottleneck, merging, mixed traffic.
-- Vehicle assumption: HDV, AV, CAV, ACC/CACC, heterogeneous behavior.
-- Outcome: capacity, travel time, stability, safety surrogate, emissions, equity.
-- Evidence scale: microscopic behavior, link-level capacity, network-level MFD, system-level policy.
+- Research object: behavior, performance, safety/reliability, efficiency, emissions, control, cost.
+- Method: empirical data, simulation/numerical, analytical model, machine learning, optimization, lab/field test.
+- Condition/scenario: operating conditions, load cases, scales, environments, or deployment contexts.
+- Modeling assumption: homogeneous vs heterogeneous units, idealized vs realistic, steady vs transient.
+- Outcome: accuracy, efficiency, stability, robustness, reliability, safety surrogate, energy, cost.
+- Evidence scale: component-level, subsystem-level, system-level, or deployment/field-level.
+
+(For a domain-specific axis set, instantiate these with the field's own terms; e.g., a traffic paper might use freeway/intersection/bottleneck/merging scenarios and HDV/AV/CAV vehicle assumptions.)
 
 ## Paragraph Template
 
@@ -34,23 +36,23 @@ Studies on [theme] have shown [established finding]. For example, [group of pape
 
 When papers disagree, do not simply say results are inconsistent. Explain likely sources:
 
-- Different AV behavior assumptions.
-- Different penetration rates.
-- Different road geometry or demand state.
-- Different car-following/lane-changing models.
-- Different metrics: throughput vs travel time vs speed vs completion rate.
-- Different calibration or lack of empirical validation.
+- Different modeling assumptions.
+- Different parameter, load, or condition ranges.
+- Different geometry, scale, or operating state.
+- Different model families or solver/algorithm settings.
+- Different metrics (e.g., efficiency vs accuracy vs reliability vs cost).
+- Different calibration or lack of experimental validation.
 
 ## Common Mistakes
 
 - Listing papers one by one without synthesis.
 - Saying “few studies have examined...” without specifying what exact combination is missing.
-- Treating all AV studies as equivalent.
-- Ignoring negative, non-monotonic, or scenario-dependent findings.
+- Treating all studies in a method family as equivalent.
+- Ignoring negative, non-monotonic, or condition-dependent findings.
 - Using review papers as substitutes for technical evidence.
 
 ## Strong Gap Sentence Forms
 
 - “What remains less clear is not whether [broad topic] matters, but how [specific mechanism] changes [specific outcome] under [specific condition].”
-- “Existing studies have compared penetration rates, but they often do not separate [behavior type A] from [behavior type B].”
+- “Existing studies have compared [parameter levels], but they often do not separate [mechanism A] from [mechanism B].”
 - “This makes it difficult to determine whether reported efficiency gains arise from [mechanism 1], [mechanism 2], or [scenario condition].”

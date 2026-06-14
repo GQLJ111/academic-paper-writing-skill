@@ -31,9 +31,9 @@ English papers should be direct, explicit, and claim-controlled. Use topic sente
 
 Prefer:
 
-- “However, these studies typically treat automated vehicles as a homogeneous class, leaving the role of car-following heterogeneity unclear.”
-- “To isolate longitudinal effects, lane changing was disabled in the bottleneck experiments.”
-- “The results suggest a threshold-like effect rather than a linear penetration-rate effect.”
+- “However, these studies typically treat the components as a homogeneous class, leaving the role of unit-level heterogeneity unclear.”
+- “To isolate the primary effect, the secondary factor was held fixed across the test conditions.”
+- “The results suggest a threshold-like effect rather than a linear dose-response relationship.”
 - “This finding should be interpreted as a simulation-based upper bound, not as a near-term field prediction.”
 
 Avoid:

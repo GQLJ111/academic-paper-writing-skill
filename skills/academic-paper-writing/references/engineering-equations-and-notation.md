@@ -169,19 +169,21 @@ $$
 
 Then define repetitions/seeds, sample inclusion rules, aggregation period, and whether uncertainty is reported.
 
-## Traffic And Simulation Notes
+## Domain Metric Notes
 
-For traffic simulation manuscripts, formulas are often needed for:
+Across engineering fields, formulas are commonly needed for:
 
-- Throughput or flow: define completed vehicles, aggregation interval, and units.
-- Completion ratio: define generated demand, completed vehicles, and whether residual vehicles are reported separately.
-- Average travel time: define whether only completed vehicles are included and flag completion bias.
-- Density/speed/flow: define spatial segment, time interval, and aggregation rule.
-- Safety/comfort proxies: define surrogate metric precisely and avoid calling it crash risk unless validated for that purpose.
-- Penetration rate and vehicle class proportions: define numerator, denominator, and scenario scope.
-- Random-seed summaries: define mean, variance, confidence interval, or robustness statistic.
+- Output/throughput: define what counts as completed, the aggregation interval, and units.
+- Success/completion ratio: define attempted vs completed and whether residual/failed cases are reported separately.
+- Aggregate averages: define the sample averaged over (e.g., only successful runs) and flag survivor/completion bias.
+- Rate/density/flux: define spatial region, time interval, and aggregation rule.
+- Efficiency/error: define the reference quantity and whether the metric is absolute or relative.
+- Surrogate/proxy metrics: define them precisely and avoid calling a proxy a direct safety, reliability, or risk measure unless validated.
+- Stochastic summaries: define mean, variance, confidence interval, or robustness statistic over seeds/repetitions.
 
-When a metric can hide an important boundary, pair the formula with the boundary. For example, average travel time over completed vehicles should be interpreted together with completion ratio or residual vehicles.
+When a metric can hide an important boundary, pair the formula with the boundary.
+
+**Worked example (traffic simulation):** throughput/flow (completed vehicles, aggregation interval, veh/h); completion ratio (generated demand vs completed, residual vehicles reported separately); average travel time (completed vehicles only — flag completion bias); density/speed/flow (segment + interval); safety/comfort proxies (surrogate, not crash risk); penetration rate (numerator/denominator/scope). Average travel time over completed vehicles should be read together with completion ratio or residual vehicles.
 
 ## Do Not Invent Rule
 

@@ -147,9 +147,9 @@ For engineering manuscripts across disciplines:
 - Are engineering implications stated at the right level, without turning scenario results into universal claims?
 - Is the Discussion architecture justified: standalone, combined with Results, or brief limitations only?
 
-## 5. Traffic Simulation Reviewer Checks
+## 5. Domain-Specific Reviewer Checks (Example: Traffic Simulation)
 
-For AV/CAV, SUMO, VISSIM, Aimsun, car-following, merging, bottleneck, and mixed-traffic manuscripts:
+Build a domain-specific reviewer checklist for the paper's field. The list below is a worked example for AV/CAV, SUMO, VISSIM, Aimsun, car-following, merging, bottleneck, and mixed-traffic manuscripts; instantiate the equivalent checks for other fields (e.g., specimen/batch controls for materials, stability/delay/saturation for control, data-split/tuning-budget fairness for ML, off-design/scale-up for process systems):
 
 - Are behavior parameters justified or explicitly framed as scenarios?
 - Is the baseline fair?

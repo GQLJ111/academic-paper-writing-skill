@@ -16,11 +16,11 @@ so mechanism/outcome Z remains unclear
 
 | Gap Type | Use When | Example Form |
 |---|---|---|
-| Mechanism gap | Outcome known but cause unclear | “It remains unclear which behavioral parameter drives the capacity change.” |
-| Heterogeneity gap | Prior work treats actors as homogeneous | “AVs are often modeled as one class despite conservative and cooperative behaviors.” |
-| Scenario gap | Findings may not transfer across road contexts | “Link-level gains may not persist under merging interactions.” |
-| Metric gap | Prior work relies on one metric | “Travel-time reductions may mask lower completion rates.” |
-| Robustness gap | Prior work uses single parameter/scenario | “The penetration-rate effect has not been tested under sensitivity or distribution changes.” |
+| Mechanism gap | Outcome known but cause unclear | “It remains unclear which parameter drives the observed performance change.” |
+| Heterogeneity gap | Prior work treats units as homogeneous | “Components are often modeled as one class despite differing materials or behaviors.” |
+| Scenario gap | Findings may not transfer across conditions | “Bench-scale gains may not persist under realistic operating conditions.” |
+| Metric gap | Prior work relies on one metric | “Efficiency gains may mask reliability, cost, or safety penalties.” |
+| Robustness gap | Prior work uses single parameter/scenario | “The effect has not been tested under sensitivity, perturbation, or distribution changes.” |
 
 ## Contribution Rules
 
@@ -29,13 +29,13 @@ Write contributions as intellectual value, not task lists.
 Weak:
 
 ```text
-This paper builds a SUMO model and draws several figures.
+This paper builds a model and draws several figures.
 ```
 
 Strong:
 
 ```text
-This paper distinguishes conservative AV and cooperative CAV car-following behaviors, showing that the same penetration rate can produce opposite efficiency effects under bottleneck and merging conditions.
+This paper distinguishes two mechanisms (or conditions), showing that the same input parameter can produce opposite performance effects under condition A and condition B.
 ```
 
 ## Contribution Pattern
@@ -50,7 +50,7 @@ Use 2-4 contributions:
 ## Chinese Contribution Phrases
 
 - “本文的主要贡献体现在以下三个方面。”
-- “不同于仅比较自动驾驶渗透率的研究，本文进一步区分……”
+- “不同于仅比较单一参数/工况的研究，本文进一步区分……”
 - “通过……实验，本文识别了……机制。”
 - “结果表明……，这一发现提示……”
 
@@ -67,4 +67,4 @@ Never overstate novelty:
 
 - Do not claim “first” unless verified.
 - Prefer “extends,” “distinguishes,” “decomposes,” “tests,” “shows,” “provides evidence.”
-- Add scenario boundaries: “in the simulated bottleneck setting,” “under the tested demand levels,” “with the adopted SUMO parameters.”
+- Add scope boundaries: “in the simulated setting,” “under the tested conditions,” “with the adopted model parameters.”

@@ -136,11 +136,11 @@ This is stronger than apologizing for every simplification.
 
 | Dimension | Levels | Purpose |
 |---|---|---|
-| Scenario | ... | Tests transfer across contexts |
-| Behavior type | ... | Separates mechanism assumptions |
-| Penetration rate | ... | Tests threshold/nonlinearity |
-| Demand | ... | Covers free-flow, near-capacity, oversaturated states |
-| Seed | ... | Captures stochastic variation |
+| Scenario/condition | ... | Tests transfer across contexts |
+| Mechanism/variant | ... | Separates mechanism assumptions |
+| Key parameter | ... | Tests threshold/nonlinearity |
+| Load/demand level | ... | Covers low, near-capacity, and overload states |
+| Seed/repetition | ... | Captures stochastic variation |
 | Sensitivity | ... | Tests parameter dependence |
 
 ## Writing Baselines
@@ -163,14 +163,14 @@ For algorithm, model, and engineering system papers, baselines should match the 
 
 Define metrics before interpreting them:
 
-- Throughput: completed vehicles per unit time.
-- Completion ratio: completed vehicles divided by generated demand.
-- Travel time: average over completed vehicles; mention possible survivor/completion bias.
-- Residual vehicles: vehicles still waiting or running at simulation end.
-- Speed/density/flow: specify aggregation area and period.
-- Safety surrogate: state that it is a proxy, not crash risk itself.
+- Throughput/output: completed units per unit time; define what counts as "completed".
+- Completion/success ratio: completed divided by attempted or generated; report residual/failed cases separately.
+- Aggregate averages: state the sample they average over (e.g., only successful runs) and flag survivor/completion bias.
+- Efficiency / accuracy / error: define the reference quantity and the calculation formula.
+- Rate / density / flux: specify the aggregation region and period.
+- Safety/reliability surrogate: state that it is a proxy, not the true risk or failure rate.
 
-When a metric can be calculated in multiple ways, provide a formula or flag the calculation rule for author confirmation. For detailed equation, notation, symbol, and unit rules, use `engineering-equations-and-notation.md`.
+When a metric can be calculated in multiple ways, provide a formula or flag the calculation rule for author confirmation. For detailed equation, notation, symbol, and unit rules, use `engineering-equations-and-notation.md`. (Domain example: a traffic paper would instantiate these as throughput in veh/h, completion ratio over generated demand, travel time averaged over completed vehicles, residual vehicles, and a safety surrogate.)
 
 ## Sensitivity and Ablation
 

@@ -45,7 +45,7 @@ Avoid:
 
 - “Research on...”
 - “Study of...”
-- Overly broad claims such as “improving traffic systems.”
+- Overly broad claims such as “improving system performance.”
 
 ## Reviewer Response Pattern
 

@@ -80,10 +80,10 @@ Use a separate Related Work / Literature Review section only when the target jou
 
 Examples:
 
-- "CAV 100% is an upper bound" -> define in Methods; discuss implication in Limitations; only brief notes elsewhere.
-- "Merging is not pure car-following" -> define in scenario design; interpret in Discussion.
-- "Average travel time can be biased by unfinished vehicles" -> define in Metrics; use in Results; explain in Discussion.
-- "AV/CAV results differ across literature" -> Introduction, or Literature Review if separately needed; do not repeat in Conclusion.
+- "The idealized 100% case is an upper bound" -> define in Methods; discuss implication in Limitations; only brief notes elsewhere.
+- "The combined-loading scenario is not the isolated mechanism" -> define in scenario/experiment design; interpret in Discussion.
+- "An average over only successful samples can be biased" -> define in Metrics; use in Results; explain in Discussion.
+- "Findings differ across the literature" -> Introduction, or Literature Review if separately needed; do not repeat in Conclusion.
 
 ### Step 4: Cut by Function
 

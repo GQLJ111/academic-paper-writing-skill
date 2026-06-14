@@ -20,32 +20,40 @@
 | 外部有效性 | external validity |
 | 可复现性 | reproducibility |
 
-## Transport and Simulation Terms
+## Common Engineering Terms
 
 | 中文 | English |
 |---|---|
-| 自动驾驶车辆 | automated vehicle / autonomous vehicle |
-| 网联自动驾驶车辆 | connected and automated vehicle |
-| 人工驾驶车辆 | human-driven vehicle |
-| 混合交通流 | mixed traffic flow |
-| 跟驰行为 | car-following behavior |
-| 换道行为 | lane-changing behavior |
-| 渗透率 | penetration rate |
-| 交通效率 | traffic efficiency |
-| 通行能力 | capacity |
-| 吞吐量/通行量 | throughput |
-| 完成率 | completion ratio |
-| 旅行时间 | travel time |
-| 延误/损失时间 | delay / time loss |
-| 瓶颈 | bottleneck |
-| 合流/汇入 | merging / on-ramp merging |
-| 加速车道 | acceleration lane |
-| 低速瓶颈 | low-speed bottleneck |
-| 速度型瓶颈 | speed-reduction bottleneck |
-| 车头时距 | time headway |
-| 最小间距 | minimum gap |
-| 扰动传播 | disturbance propagation |
-| 交通流基本图 | fundamental diagram |
+| 自变量 | independent variable |
+| 因变量 | dependent variable |
+| 工况/运行条件 | operating condition |
+| 载荷工况 | load case |
+| 边界条件 | boundary condition |
+| 标定/校准 | calibration |
+| 验证/确认 | verification / validation |
+| 收敛性 | convergence |
+| 不确定性 | uncertainty |
+| 效率 | efficiency |
+| 吞吐量/产出 | throughput |
+| 精度/误差 | accuracy / error |
+| 稳定性 | stability |
+| 可靠性 | reliability |
+| 失效/故障 | failure / fault |
+| 能耗 | energy consumption |
+| 排放 | emissions |
+| 代理指标 | surrogate / proxy metric |
+| 基准/对照 | baseline / reference case |
+
+## Building a Per-Field Glossary
+
+Most disciplines need their own term table. Before drafting in an unfamiliar field, build a compact glossary that fixes one term per concept and keeps it consistent across Methods, Results, captions, and tables. Use this template:
+
+| 中文 | English | Note (unit / scope if relevant) |
+|---|---|---|
+
+As a worked sample, a traffic/AV manuscript glossary might include: 自动驾驶车辆 → automated/autonomous vehicle; 网联自动驾驶车辆 → connected and automated vehicle (CAV); 混合交通流 → mixed traffic flow; 跟驰行为 → car-following behavior; 换道行为 → lane-changing behavior; 渗透率 → penetration rate; 通行能力 → capacity; 吞吐量 → throughput; 完成率 → completion ratio; 旅行时间 → travel time; 瓶颈 → bottleneck; 合流 → merging; 车头时距 → time headway; 最小间距 → minimum gap; 交通流基本图 → fundamental diagram.
+
+Do not reuse another field's terms by default; instantiate the template with the user's own domain vocabulary.
 
 ## Cautious Claim Verbs
 

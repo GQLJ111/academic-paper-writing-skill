@@ -367,7 +367,7 @@ Do not start a Results subsection with a figure or table as the first substantiv
 - “It can be seen from the figure...”
 - Reporting every minor value.
 - Ignoring results that complicate the story.
-- Treating completed-vehicle averages as system performance when completion differs.
+- Treating averages over only completed/successful samples as overall system performance when completion or success rates differ.
 - Explaining full mechanisms that belong in Discussion.
 - Ending every paragraph with the same general boundary statement.
 - Duplicating figure captions in the text.
@@ -394,7 +394,7 @@ Future work: what extension follows from the boundary?
 ### Strong Discussion Sentence
 
 ```text
-This result helps explain why previous studies have reported inconsistent effects: [factor] changes [mechanism], so the same penetration rate can produce different system-level outcomes.
+This result helps explain why previous studies have reported inconsistent effects: [factor] changes [mechanism], so the same input or parameter level can produce different system-level outcomes.
 ```
 
 ### Avoid
