@@ -1,6 +1,6 @@
 ---
 name: academic-paper-writing
-description: Use when the user asks for formal academic manuscript, thesis, journal, SCI/SSCI, or conference-paper writing; section drafting or revision; abstract/introduction/methods/results/discussion/conclusion rewriting; methods, formulas, equations, notation, metrics, or model-definition writing; academic polishing; manuscript compression; reviewer response or rebuttal; or Chinese requests such as 论文润色、改摘要、改引言、期刊论文压缩、审稿意见回复.
+description: Use when the user asks for formal academic manuscript, thesis, journal, SCI/SSCI, or conference-paper writing; section drafting or revision; abstract/introduction/methods/results/discussion/conclusion rewriting; methods, formulas, equations, notation, metrics, or model-definition writing; academic polishing; sentence-level grammar repair; incomplete, unclear, or semantically underspecified sentences; missing subjects or predicates; manuscript compression; reviewer response or rebuttal; or Chinese requests such as 论文润色、病句修改、语句不通顺、残句、缺主语、缺谓语、改摘要、改引言、期刊论文压缩、审稿意见回复.
 ---
 
 # Academic Paper Writing
@@ -61,7 +61,7 @@ For small one-paragraph edits, keep the mode implicit but preserve its output co
 
 Default to **journal-style manuscript mode** unless the user explicitly asks for an exhaustive material draft, thesis chapter, or background report.
 
-In this mode: write to a narrow argument; prefer fewer, stronger claims over comprehensive coverage; put detailed parameter listings, secondary checks, and repeated cautions in tables/appendices/notes; treat "complete" as logically complete, not long. For non-review empirical/experimental/simulation/modeling/engineering papers, start from the closest engineering article architecture rather than forcing one template — IMRaD is common, but `Results and Discussion` may be combined, and a separate Literature Review is added only when the venue requires it or the synthesis is too complex for the Introduction.
+In this mode: write to a narrow argument; prefer fewer, stronger claims over comprehensive coverage; use tables for detailed parameters only when repeated fields require lookup or comparison, and otherwise use concise prose, appendices, or notes for secondary material and repeated cautions; treat "complete" as logically complete, not long. For non-review empirical/experimental/simulation/modeling/engineering papers, start from the closest engineering article architecture rather than forcing one template — IMRaD is common, but `Results and Discussion` may be combined, and a separate Literature Review is added only when the venue requires it or the synthesis is too complex for the Introduction.
 
 Use **full material draft mode** only when the user asks to collect all evidence or preserve exploratory reasoning, and mark it clearly as a material draft.
 
@@ -85,27 +85,43 @@ Use the shape that matches the task mode (full templates in `references/manuscri
 
 Do not bury the answer under process notes. Diagnostic blocks should be short enough to improve the final text, not replace it.
 
+## Manuscript vs Commentary Boundary
+
+Keep manuscript prose and author-facing commentary as two separate layers.
+
+- **Manuscript layer**: title, headings, paragraphs, captions, equations, tables, transitions, claims, evidence, interpretation, and boundaries that belong in the paper.
+- **Commentary layer**: pre-writing briefs, diagnosis, assumptions, missing-input flags, revision explanations, and audit results. Use it only when the task or missing evidence requires it, and keep it outside the manuscript text.
+
+When drafting, revising, or polishing manuscript text, do not add author-facing narration such as “下面将说明……”, “为了便于理解……”, “这句话可以理解为……”, “本段主要介绍……”, or “需要注意的是……” when the phrase only explains how to read the text or what the assistant changed. Replace it with the actual research object, relation, evidence, condition, or boundary; retain a signpost only when it carries real logical content.
+
+Do not expose the skill's routing, planning, grammatical parsing, audit labels, or revision rationale inside the paper. If the user requests manuscript-only output, begin with the manuscript text and suppress preambles, teaching explanations, and process summaries.
+
 ## Reference Selection
 
 Load only the references needed:
 
-- Bilingual style, English SCI/SSCI, Chinese academic writing, translation/adaptation → `references/bilingual-writing-rules.md`.
-- Full-paper architecture, article type, section order, thesis-vs-journal structure → `references/whole-manuscript-architectures.md`.
+Use the routing list below as the ownership map when several references mention the same topic: the named owner contains the detailed rule; other files should retain only a short task-specific reminder.
+
+- Bilingual style, English SCI/SSCI, Chinese academic writing, translation/adaptation, sentence-skeleton, information completeness, and reference clarity → language owner: `references/bilingual-writing-rules.md`.
+- Full-paper architecture, article type, section order, thesis-vs-journal structure → architecture owner: `references/whole-manuscript-architectures.md`.
 - General writing workflow, argument chain, writing from scattered materials → `references/writing-workflow.md`.
-- Top-journal section patterns (title, abstract, introduction, methods, results, discussion, conclusion) → `references/top-journal-section-patterns.md`.
+- Top-journal section patterns (title, abstract, introduction, literature/gap/contribution, methods, experiments, and conclusion) → section-pattern owner: `references/top-journal-section-patterns.md`.
+- Any task that creates, retains, places, or explains figures/tables in any section → visual-evidence owner: also load `references/results-and-discussion.md` for necessity, clustering, anchoring, and layout.
 - Literature review, related work, paper comparison, synthesis → `references/literature-review.md`.
 - Research gap, novelty, contribution statements, introduction logic → `references/research-gap-and-contribution.md`.
-- Methodology, experiment design, simulation setup, variables, indicators, reproducibility, ablation/sensitivity → `references/experiment-methods.md`.
+- Methodology, experiment design, simulation setup, variables, indicators, reproducibility, ablation/sensitivity, table necessity → methods owner: `references/experiment-methods.md`.
 - Formulas, equations, notation, symbols, units, metric/model definitions, objectives, constraints → `references/engineering-equations-and-notation.md`.
-- Results, figures/tables, discussion, limitations, conclusion → `references/results-and-discussion.md`.
+- Results, figure/table selection, multi-panel composition/layout, discussion, and limitations → operational evidence owner: `references/results-and-discussion.md`.
 - Whole-draft diagnosis, paper scoring, reviewer-style audit, what to revise first → `references/paper-quality-review.md`.
 - Target journal family or fit decisions → `references/target-journal-fit.md`.
-- Final polishing, logical diagnosis, abstract/title revision, reviewer response → `references/revision-and-polishing.md`.
+- Final polishing, logical diagnosis, sentence-level integrity repair, anti-meta/anti-teaching-style repair, abstract/title revision, reviewer response → revision owner: `references/revision-and-polishing.md`.
 - Manuscript spine, claim-evidence-citation mapping, figure contracts, section-aware audit, pre-delivery checks → `references/manuscript-spine-and-audit.md`.
 - Academic terms, phrase banks, Chinese-English equivalents → `references/terminology-and-phrases.md`.
 - Turning a verbose material/thesis/report draft into a journal manuscript → `references/material-to-journal-revision.md`.
 - A full empirical/experimental/simulation engineering manuscript (IMRaD template, evidence chain, reviewer-attack checklist) → `references/engineering-empirical-and-simulation-template.md`.
 - A concrete, field-appropriate framing (mechanical/materials/civil, electrical/control/automation, computer/AI/algorithms, energy/chemical/environmental, or traffic) → `references/engineering-domain-examples.md`.
+
+Engineering templates and quality-review files add subtype-specific examples or review questions; they do not replace the core owners above.
 
 ## Citation Placement
 
@@ -133,10 +149,11 @@ These are the non-negotiable principles; their detailed application is in the re
 12. **Make each paragraph earn its place.** One message and a nameable role per paragraph; reverse-outline and merge/move/delete the rest.
 13. **Engineering Methods = design, rationale, validation role** — not a software/equipment/parameter inventory.
 14. **Choose the Discussion architecture deliberately** — standalone vs. `Results and Discussion`; never a Discussion that only restates numbers.
-15. **Anchor every main figure/table in prose** — lead-in before, uptake after; captions support but do not replace explanation.
+15. **Select, compose, and anchor every main figure/table deliberately.** Use a visual only when it communicates a core comparison, pattern, structure, or reproducibility detail more clearly than prose. Group directly comparable visuals into a readable multi-panel figure; keep visuals serving different claims separate; use standalone or wider placement when density or aspect ratio requires it. Provide lead-in prose before and uptake prose after; captions support but do not replace explanation.
 16. **Formalize engineering definitions when prose is ambiguous.** Define every symbol and unit needed for reproducibility. Never invent formulas, parameters, or values without user evidence — ask or flag a candidate definition.
-17. **Run a light pre-delivery audit** for unsupported claims, citation padding, result/discussion mixing, conclusion overclaiming, repeated caveats, section overlap, figure-by-figure dumping, orphaned visuals, and equation dumping. Fix what you can; flag the exact missing input otherwise.
+17. **Run a light pre-delivery audit** for unsupported claims, citation padding, result/discussion mixing, conclusion overclaiming, repeated caveats, section overlap, unnecessary tables, figure/table redundancy, figure-by-figure dumping, orphaned or unreadable visual layouts, equation dumping, sentence-skeleton defects, and grammatically complete but semantically underspecified claims. Fix what you can; flag the exact missing input otherwise.
 18. **Default to paragraph-style journal conclusions.** Do not number conclusions as `(1)/(2)/(3)`, `1./2./3.`, or `第一/第二/第三` unless the user asks, a target journal/template requires it, or the output is a thesis/course report requiring enumerated findings.
+19. **Preserve sentence-skeleton and information integrity.** Give every sentence a clear or context-recoverable subject and an explicit predicate; supply any object, result, complement, condition, or boundary required by the intended meaning; attach modifiers and references unambiguously. Do not force every Chinese sentence to contain all six traditional components or repeat “本文”; recast or split a sentence when its core subject-predicate relation is hard to identify. Treat a claim as incomplete when verbs such as validate, improve, affect, compare, or outperform lack a specific object, metric, baseline, condition, or scope in the sentence or its immediately connected context.
 
 ## Top-Journal Pattern
 
@@ -154,4 +171,4 @@ Adapt by language: Chinese allows clearer transitional logic and moderate contex
 
 Provide publication-ready text unless the user asks for notes. When diagnosing, lead with structural issues before sentence-level edits. When revising, preserve the user's intended claim unless it is unsupported; if unsupported, narrow it rather than embellish it.
 
-Default responses are chat-ready Markdown academic text. Do not create `.docx`, `.tex`, `.pdf`, or other manuscript files unless the user explicitly asks for file generation or conversion. Include figure/table references only when the user has provided or identified the evidence. Do not invent numerical results, citations, journal names, or "top journal" claims.
+Default responses are chat-ready Markdown academic text. Do not create `.docx`, `.tex`, `.pdf`, or other manuscript files unless the user explicitly asks for file generation or conversion. Keep internal planning, diagnosis, audit tables, teaching explanations, and revision rationale out of manuscript prose unless the user asks to see them or they have a genuine manuscript function. In manuscript-only tasks, start directly with the requested paper text. In Markdown-only drafts, state any intended multi-panel arrangement or width as a concise layout note; implement physical placement only when the user requests a file and the target format/template permits it. Include figure/table references only when the user has provided or identified the evidence. Do not invent numerical results, citations, journal names, or "top journal" claims.

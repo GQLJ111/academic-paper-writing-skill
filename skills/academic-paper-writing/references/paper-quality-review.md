@@ -61,14 +61,14 @@ Check:
 
 ### Figure/Table Evidence Chain
 
+Use `manuscript-spine-and-audit.md` for detailed display contracts and `results-and-discussion.md` for operational visual rules. In this review file, score only whether the evidence chain is sound:
+
 Check:
 
-- Does each main figure answer a research question?
-- Are figures/tables redundant?
-- Are core claims supported visually or numerically?
-- Are figures/tables integrated into evidence clusters rather than narrated one by one?
-- Is each main figure/table anchored by lead-in prose before it and uptake prose after it?
-- Are secondary checks moved to supplement when appropriate?
+- Are main figures/tables necessary, non-redundant, and tied to core claims?
+- Are related visuals synthesized as evidence clusters rather than narrated one by one?
+- Do lead-in and uptake prose make each retained visual's role clear?
+- Are secondary checks moved to the supplement when they do not change the main interpretation?
 
 ### Results
 
@@ -122,7 +122,7 @@ If a paragraph's function cannot be named, it is usually filler or duplicated ma
 |---|---|---|
 | Locally clear but globally bloated | Sections written independently | Rebuild whole-paper architecture |
 | Long review with many citations | Literature used as inventory | Reorganize by theme and gap |
-| Methods read like a manual | Too much prose detail | Convert to parameter/matrix tables |
+| Methods read like a manual | Too much prose detail | Compress the prose; use a parameter/matrix table only when repeated fields require lookup or comparison |
 | Methods read like an inventory | Tools, software, modules, or parameters listed without rationale | Add design/procedure, rationale, and validation role |
 | Methods contain formula dumping | Consecutive equations without purpose/scope prose | Group by metric family or method decision; use a metric table when clearer |
 | Results are descriptive | Figures not tied to questions | Rewrite each result around one question |

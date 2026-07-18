@@ -25,6 +25,29 @@ Avoid:
 - “显著提高”“大幅改善”“有效验证” without metric, comparison, or boundary.
 - Repeated “本文首先……其次……最后……” when a more argumentative structure is possible.
 
+### Chinese Sentence Skeleton
+
+Treat `主谓宾定状补` as a diagnostic vocabulary, not a six-slot template. A sentence may omit a subject recoverable from the immediately preceding context and may not need an object or complement, but its semantic skeleton must remain unambiguous.
+
+Before delivery, check:
+
+- **Subject**: identify who or what performs the action, has the property, or undergoes the change. Restore the subject after a subject shift; do not add “本文” mechanically to every sentence.
+- **Predicate**: use an explicit action, state, or relation. Do not deliver a heading-like noun phrase as a sentence.
+- **Required completion**: include the object, result, degree, comparison baseline, condition, or scope needed to complete the claim.
+- **Modifier attachment**: make every 定语、状语和补语 point to the intended noun or action; shorten nested `的` phrases when the center noun is hard to locate.
+- **Reference**: replace ambiguous `其/该/这种/上述/这` with a specific noun phrase when more than one antecedent is possible.
+- **Clause relation**: split comma-spliced clauses or add a precise logical connector when the relation is not self-evident.
+
+Use these repair patterns:
+
+| Faulty pattern | Problem | Repair direction |
+|---|---|---|
+| `通过构建不同渗透率场景，并分析交通效率。` | Only an introductory adverbial; no main subject-predicate clause | `本研究构建了不同渗透率场景，并分析了交通效率。` |
+| `仿真结果表明，随着换道强度增加，降低了道路通行能力。` | The subject of `降低` is missing | `仿真结果表明，随着换道强度增加，道路通行能力逐渐降低。` |
+| `基于跟驰间距与换道强度耦合作用的交通效率影响分析。` | Nominal fragment; no predicate | `本研究分析了跟驰间距与换道强度的耦合作用对交通效率的影响。` |
+| `该结果说明其具有显著影响。` | `该结果` and `其` lack clear referents or an effect object | Name the result, influencing factor, affected metric, and comparison boundary explicitly |
+| Several independent claims joined only by `，` | Subject drift and logical relation are hidden | Split the sentence or mark coordination, contrast, cause, or progression explicitly |
+
 ## English Journal Style
 
 English papers should be direct, explicit, and claim-controlled. Use topic sentences. Put the gap and contribution in visible sentences.
@@ -43,9 +66,22 @@ Avoid:
 - “The results are very obvious/significant” without statistical or practical grounding.
 - Direct Chinese-to-English structures such as “Based on this, this paper...” repeated across paragraphs.
 
+For sentence integrity, require a subject and finite verb in every independent sentence; repair fragments, subject shifts, and dangling introductory modifiers. Replace bare `this/these` with a concrete head noun when needed, and unpack long noun stacks when they hide the action, object, or relation.
+
+Use these repair patterns:
+
+| Faulty pattern | Problem | Repair direction |
+|---|---|---|
+| `Based on the simulation results.` | Prepositional fragment; no main subject or finite verb | `The simulation results show that ...`, only when the finding is supplied |
+| `Using SUMO, traffic efficiency was evaluated under different penetration rates.` | Dangling introductory modifier and hidden agency | `We used SUMO to evaluate traffic efficiency under different penetration rates.` or use a clear passive construction |
+| `This indicates a significant improvement.` | Vague referent; missing metric, baseline, and condition | Name the specific finding, affected metric, comparator, and applicable condition |
+| `A vehicle behavior parameter impact mechanism analysis was conducted.` | Dense noun stack hides the action and relation | `We analyzed how vehicle-behavior parameters affect [specified outcome].` |
+
 ## Translation and Adaptation
 
 Translation here means rhetorical adaptation, not literal conversion. Adapt the argument structure to the target language and venue; never make the target text claim more than the source evidence supports.
+
+When the target is manuscript prose, output the adapted paper text rather than translating author-facing commentary. Do not carry over source phrases that merely explain how to understand a sentence or announce what the next paragraph will do; retain them only when they express a real logical relation, scope condition, or methodological purpose.
 
 See also: keep one English term per concept using the glossary guidance in `terminology-and-phrases.md`; for sentence-level polishing principles use `revision-and-polishing.md`; for abstract skeletons use `top-journal-section-patterns.md`.
 

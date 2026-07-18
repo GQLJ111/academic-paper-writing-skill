@@ -19,7 +19,7 @@ Before editing, create a diagnosis table:
 |---|---|---|
 | Repeated claim | Sections where it repeats | Keep one full version; shorten/delete others |
 | Section role overlap | Sections doing same job | Merge or redefine section jobs |
-| Excess method prose | Long parameter/scenario paragraphs | Convert to table or appendix |
+| Excess method prose | Long parameter/scenario paragraphs | Compress the prose; use a table only for repeated comparison/lookup fields, otherwise move detail to an appendix |
 | Result overload | Too many similar metrics/figures or figure-by-figure result prose | Keep core evidence; synthesize evidence clusters; move secondary checks |
 | Formula dump | Consecutive equations listed without prose logic | Group by method decision or metric family; move basic definitions to a table when clearer |
 | Defensive caveats | Same boundary repeated | Keep local cautions brief; full discussion once |
@@ -100,19 +100,9 @@ If a paragraph only says the topic is important, repeats a known limitation, or 
 
 ### Step 5: Rebuild Results Around Claims
 
-Do not write one result block for every figure/table by default. Write one result block for each research question, claim, or mechanism. Each block may use one figure, several figures/tables, or one figure plus a metric table.
+Use the evidence-cluster protocol in `results-and-discussion.md`. Create one result block for each research question, claim, or mechanism, not one block for every figure, table, metric, or experiment log. Each block should state the claim, identify the joint evidence, report only the numbers needed, and retain the comparison, interpretation, and boundary required by that claim.
 
-```text
-Claim or research question.
-Evidence cluster: figure/table/metric items that jointly support the claim.
-Main observation and the few numbers needed.
-Comparison or contrast that makes the evidence meaningful.
-Mechanism or local interpretation.
-Boundary that prevents overclaiming.
-```
-
-Do not write a paragraph for every metric if several metrics tell the same story.
-Do not write a paragraph for every figure if several figures tell the same story.
+When several visuals tell the same story, synthesize them in one block; when a visual does not change the main interpretation, demote it to a caption, appendix, or supplement.
 
 ### Step 6: Rewrite Discussion, Not Results
 
@@ -129,13 +119,7 @@ Move detailed result descriptions back to Results or delete them.
 
 The abstract should match the final paper, not the original material draft.
 
-The conclusion should be short and paragraph-based by default:
-
-Opening paragraph: objective and scope in one or two sentences.
-
-Middle paragraph(s): compact synthesis of supported findings; do not force a fixed count or list format.
-
-Closing paragraph: contribution/implication plus one concise limitation or future direction.
+Use the paragraph-style conclusion pattern in `top-journal-section-patterns.md`. Keep only the supported findings, contribution/implication, and most consequential boundary or future direction; do not introduce a fixed count or new evidence.
 
 ## 4. Sentence-Level Compression
 
@@ -147,7 +131,7 @@ Patterns:
 - Replace long caveats with precise boundaries.
 - Replace repeated "需要指出的是" with one integrated clause.
 - Replace "可以看出" with the actual observation.
-- Convert parameter prose to table references.
+- Convert parameter prose to table references only when repeated fields make the table clearer than concise prose.
 - Replace figure-by-figure transitions with claim-driven topic sentences.
 - Replace stacked formulas with grouped metric definitions plus brief purpose/scope prose.
 - Merge consecutive paragraphs if both explain the same mechanism.

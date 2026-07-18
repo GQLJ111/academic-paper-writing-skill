@@ -8,49 +8,7 @@ Strong papers are not complete because they say everything. They are complete be
 
 ## 0.1 Whole-Manuscript Architectures
 
-For full-paper architecture selection, thesis vs journal structure, section role separation, and compression targets, read `whole-manuscript-architectures.md`. This file focuses on section-level patterns after the manuscript architecture has been chosen.
-
-### Section Role Separation
-
-| Content type | Full development belongs in | Other sections may only |
-|---|---|---|
-| Practical motivation | Introduction | Mention in one sentence |
-| Literature streams and gap | Introduction, or Literature Review if separately needed | Cite briefly |
-| Experimental design choices | Methodology | Refer to setup/table |
-| Numerical results | Results | Summarize only the strongest finding |
-| Mechanism and interpretation | Discussion | Give one-sentence interpretation in Results |
-| Limitations and boundaries | Discussion or Limitations | Include short local cautions only when needed |
-| Durable findings | Conclusion | Avoid re-explaining methods or literature |
-
-### Anti-Repetition Rule
-
-For any recurring idea, choose one of three treatments:
-
-1. **Define once**: give the full explanation in the section where it belongs.
-2. **Refer briefly**: later sections use a short phrase, not a second explanation.
-3. **Delete**: if the idea does not change the reader's interpretation at that point.
-
-Do not fully explain the same boundary in Abstract, Introduction, Method, Discussion, and Conclusion. For example, a simulation paper may mention model boundaries briefly in the abstract, justify controlled assumptions in methods, and discuss generalizability in limitations; it should not restate the same warning after every result.
-
-### Compression Targets
-
-Use these as judgment guides, not fixed word limits:
-
-- Abstract: problem, method, 2-4 key results, contribution, one boundary.
-- Introduction: 4-6 focused paragraphs; include the focused literature synthesis needed to establish the gap.
-- Literature review, if separately used: 3-5 thematic streams plus a synthesis gap; no paper-by-paper catalog.
-- Methods: tables for parameters and matrices; equations for ambiguous metrics, models, objectives, or constraints; prose explains design logic.
-- Results: each subsection answers one question; report only numbers needed for the claim.
-- Discussion: 4-6 conceptual moves; do not re-report result tables.
-- Conclusion: the smallest prose synthesis of durable findings plus brief limitation/future work; not a second abstract.
-
-### Bloat Symptoms
-
-- The same phrase appears in multiple sections with only minor wording changes.
-- Every claim is followed by a long caveat.
-- The text says "this paper constructs/compares/analyzes" repeatedly instead of advancing the argument.
-- Results and discussion both describe the same figure in detail.
-- The conclusion repeats the abstract, methods, and limitations instead of stating durable findings.
+For full-paper architecture selection, section-role separation, and compression targets, read `whole-manuscript-architectures.md`. This file owns the section-level writing patterns after the manuscript architecture has been chosen. Apply the one-home rule from the architecture file; do not repeat a full motivation, limitation, or method explanation merely because the section changes.
 
 ## 1. Title
 
@@ -345,15 +303,7 @@ Use figure or table numbers only after the claim has been stated. If several fig
 
 ### Figure/Table Placement Pattern
 
-Use a `lead-in prose -> visual -> uptake prose` pattern for Results visuals:
-
-```text
-Lead-in: what question, claim, comparison, or evidence cluster the reader should inspect.
-Figure/table: the visual evidence.
-Uptake: the key observation, number, contrast, anomaly, boundary, or transition.
-```
-
-Do not start a Results subsection with a figure or table as the first substantive item. Do not let a caption replace the uptake paragraph or sentence. When several visuals belong together, introduce them as one evidence cluster before the first visual and interpret the cluster after the last visual.
+For the complete `lead-in prose -> visual/evidence cluster -> uptake prose` protocol, multi-panel composition, and layout decisions, use `results-and-discussion.md`. Here, retain only the section-level rule: state the question or claim before citing a visual, then explain the observation and its role in the argument.
 
 ### Strong Results Sequence
 
@@ -372,8 +322,6 @@ Do not start a Results subsection with a figure or table as the first substantiv
 - Ending every paragraph with the same general boundary statement.
 - Duplicating figure captions in the text.
 - Letting figure numbers determine the Results structure.
-- Placing a figure or table directly after a subsection heading without lead-in prose.
-- Moving on after a figure or table without uptake prose that interprets its role in the argument.
 
 ## 10. Discussion
 
@@ -467,7 +415,7 @@ Use numbered conclusions only when the user explicitly asks for numbered conclus
 
 ### Job
 
-Build the evidence chain visually.
+Build the evidence chain visually. For display necessity, prose-vs-table-vs-figure choice, multi-panel composition, and single-column/double-column/full-width layout, use `results-and-discussion.md`, which owns the operational visual rules.
 
 Figures and tables may appear in Introduction, Methods, Results, Discussion, or other body sections, but their rhetorical job changes by section:
 
@@ -500,8 +448,7 @@ What is plotted + scenario/condition + key comparison + interpretation boundary.
 - Too many similar line charts.
 - Captions that only repeat axis names.
 - Figures whose message is not mentioned in the text.
-- A figure or table as the first substantive item after a section or subsection heading.
-- Back-to-back figures or tables without prose that introduces and interprets them as one evidence cluster.
+- Orphan visuals; apply the lead-in and uptake check from `results-and-discussion.md`.
 
 ## 14. Section-Level Diagnosis
 

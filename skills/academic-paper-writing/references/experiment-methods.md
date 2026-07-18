@@ -19,7 +19,7 @@ Rationale: why the chosen conditions, parameters, controls, modules, or baseline
 Validation role: how the design supports reproducibility, fair comparison, mechanism isolation, robustness, or application assessment.
 ```
 
-If a paragraph only lists tools, software commands, instruments, modules, or parameter values without explaining rationale or validation role, convert the list into a table and use prose to explain the design logic.
+If a paragraph only lists tools, software commands, instruments, modules, or parameter values without explaining rationale or validation role, first test whether the material has a meaningful repeated row/column structure that benefits from lookup or comparison. If so, use a compact table and reserve prose for design logic. If the material contains only a few simple facts with no cross-comparison task, keep concise prose instead.
 
 ## Essential Elements
 
@@ -112,9 +112,20 @@ Every scenario, demand/input level, parameter level, comparison group, and test 
 
 Avoid relying on “previous studies used this” as the only reason unless the condition is also relevant to the current research question.
 
-## Recommended Tables and Schematics
+## Table and Schematic Selection
 
-Use tables or schematic figures for details that would otherwise become dense prose:
+### Table Necessity Gate
+
+Create a manuscript table only when it performs a clear lookup, comparison, or reproducibility function more efficiently than prose. Check:
+
+- Does the reader need to compare repeated attributes across several objects, methods, conditions, or scenarios?
+- Do exact values, units, sources, or settings need to be retrieved rather than merely understood once?
+- Are there meaningful row and column dimensions, rather than ordinary sentences split into cells?
+- Does the table reduce cognitive load without duplicating a figure or nearby prose?
+
+If the answer is no, keep the information in concise prose. Use a schematic for spatial, causal, architectural, or process relationships; use a plot for trends, distributions, or functional relationships. Do not convert internal planning matrices into manuscript tables unless they have a direct reproducibility or comparison role, and never populate a table with invented values.
+
+Only after the Table Necessity Gate passes may repeated information be converted into a manuscript table. After choosing between prose, table, and schematic, consider these candidates rather than treating them as required displays:
 
 - Study object, equipment, model, or vehicle/entity settings.
 - Scenario geometry, network/site layout, or test setup.

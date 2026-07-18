@@ -38,6 +38,34 @@ Use a `lead-in prose -> figure/table -> uptake prose` pattern for manuscript log
 
 Do not place a figure or table immediately after a Results subsection title without a sentence that tells the reader why it is being shown. Do not place two or more visuals back-to-back unless the manuscript text first defines them as one evidence cluster and then interprets the cluster afterward. A caption cannot carry the whole interpretation by itself.
 
+## Visual Necessity and Representation Gate
+
+Before creating or retaining a display, decide whether it communicates the claim more efficiently than prose:
+
+| Form | Use when |
+|---|---|
+| Prose | A few simple facts or values can be stated clearly and no repeated comparison structure is needed |
+| Table | Exact values or repeated attributes must be compared or retrieved across objects, methods, parameters, or conditions |
+| Figure | The claim depends on a trend, relationship, distribution, mechanism, spatial pattern, or visual contrast |
+| Appendix/supplement | The evidence is useful for completeness or robustness but does not change a main-text interpretation |
+
+Do not create a table merely by splitting an ordinary paragraph into cells. Do not present the same evidence as both a figure and a table unless the figure carries an essential pattern and the table supplies exact values that readers genuinely need. Remove or demote any visual that does not support a research question, reproducibility decision, comparison, or boundary.
+
+## Multi-Panel and Layout Decision
+
+Arrange retained visuals by comparison logic and readability, not by file name, generation order, or figure number:
+
+| Arrangement | Use when |
+|---|---|
+| `1 x 2` side-by-side | Two panels require direct comparison, use compatible scales/encodings, and remain legible at the intended width |
+| `2 x 1` stacked | Panels share a horizontal variable or sequence, or side-by-side placement would make labels, legends, or patterns too small |
+| `1 x 3` row | Three compact panels require direct comparison and remain readable at the intended width |
+| `2 x 2` grid | Four related panels form a coherent comparison; for three panels, use a deliberate spanning layout rather than an empty decorative slot |
+| Standalone, wide, or full-width | A heatmap, network, workflow, schematic, dense legend, or wide aspect ratio needs more space |
+| Separate figures | Visuals support different claims, require different reading tasks, or use scales/contexts that make direct grouping misleading |
+
+Treat a multi-panel composition as one manuscript display with ordered `(a)`, `(b)`, `(c)` labels and one caption that explains the role of every panel. Where comparison is valid, align units, axis ranges, colors, line styles, legend semantics, and condition ordering. Never shrink labels or data marks merely to force side-by-side placement. Target-journal and template constraints override generic layout preferences. When a target template is known, use single-column width only if the complete display remains legible; otherwise use double-column/full-width placement. In a Markdown draft, record the intended arrangement as a layout note rather than pretending that physical placement has been implemented.
+
 ## Observation vs Interpretation
 
 Observation:
@@ -64,6 +92,7 @@ The result should not be interpreted as evidence of robustness under untested wo
 - Do not include redundant figures in the main text.
 - Do not write figure-by-figure prose such as "Figure 2 shows..., Figure 3 shows..., Figure 4 shows..." unless each figure answers a genuinely different research question.
 - If several figures show the same pattern across metrics, scenarios, or robustness checks, synthesize the pattern in one paragraph and cite the figures as an evidence cluster.
+- Combine directly comparable panels when doing so reduces repetition and preserves legibility; do not combine unrelated figures merely because they are adjacent in the source material.
 - Use figure captions to state what is plotted, under what condition, and what comparison matters.
 - In the manuscript text, anchor each main figure or table with lead-in prose before it and uptake prose after it.
 - Put detailed sensitivity, robustness, and secondary metrics in supplements unless they carry a core claim.
@@ -78,6 +107,8 @@ Before delivering Results, scan for these failure signs:
 - A subsection begins with a figure or table before any prose states the question or claim.
 - A figure or table is followed immediately by another visual or by a new subsection without uptake prose.
 - Several similar line charts receive separate prose even though they support one claim.
+- Related panels remain separate or follow generation order even though a multi-panel comparison would be clearer.
+- Unrelated panels are forced into one figure, or panel labels/axes become unreadable after composition.
 - Captions carry the actual interpretation while the text only points to figures.
 
 Fix by rewriting around `lead-in -> visual/evidence cluster -> uptake -> boundary`. Move secondary figures to captions, tables, appendix, or supplementary material when they do not change the main claim.
@@ -133,16 +164,6 @@ Avoid:
 - “The model is simple, so the results may be inaccurate.”
 - Limitations that imply the entire study is invalid.
 
-## Conclusion Pattern
+## Conclusion Routing
 
-Use a compact paragraph-style conclusion for journal manuscripts:
-
-Opening paragraph: briefly restate the research problem, method, and core material/experimental scope.
-
-Middle paragraph(s): synthesize the supported findings as coherent prose. Each finding should keep one claim and only the key condition or number needed; use only as many findings as the results support.
-
-Closing paragraph: state the contribution/implication, the most consequential boundary, and future work.
-
-Do not use `(1)`, `(2)`, `(3)`, `1.`, `2.`, `3.`, or `第一/第二/第三` unless the user explicitly asks for numbered conclusions, a provided target journal/template requires numbering, or the output is for a thesis/course report that requires enumerated findings.
-
-Do not introduce new numbers or claims not shown in results. Do not repeat the full methods, literature gap, or every limitation.
+For conclusion structure, paragraph-style defaults, and the limited exceptions for numbered findings, load `top-journal-section-patterns.md`. This file supplies the evidence needed for the conclusion but does not redefine its prose architecture.

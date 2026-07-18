@@ -170,7 +170,7 @@ Do not fully explain the same boundary in the abstract, introduction, method, di
 - Abstract: problem, method, 2-4 key results, contribution, one boundary.
 - Introduction: 4-6 focused paragraphs; include only the literature needed to establish the gap.
 - Literature review, if used: 3-5 thematic streams plus a synthesis gap; no paper-by-paper catalog.
-- Methods: tables for parameters and matrices; equations for ambiguous metrics, models, objectives, or constraints; prose explains design logic.
+- Methods: tables only when repeated parameter/matrix fields require lookup or comparison; equations for ambiguous metrics, models, objectives, or constraints; prose explains design logic.
 - Results: each subsection answers one question.
 - Results and Discussion, if combined: each subsection reports the evidence, interprets mechanism or implication, and states a local boundary without duplicating a later discussion.
 - Discussion, if standalone: 4-6 conceptual moves; do not re-report result tables.

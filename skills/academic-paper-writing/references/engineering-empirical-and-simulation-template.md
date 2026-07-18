@@ -92,7 +92,7 @@ Include, when relevant to the subtype:
 - Platform/equipment/instrument/software and version.
 - Specimen/site/network/dataset/scenario design.
 - Entity, component, agent, or material classes and their models.
-- Parameter table with rationale or source.
+- Parameter table only when repeated settings require lookup or comparison, with rationale or source.
 - Independent variables, factor levels, load/demand/operating conditions.
 - Controlled variables and how confounders are isolated.
 - Random seeds, repetitions, sampling interval, warm-up, and run duration for stochastic or time-evolving studies.
@@ -102,32 +102,30 @@ Include, when relevant to the subtype:
 
 Every condition level, factor level, comparison group, and parameter choice needs a rationale. Use rationales such as operating-state coverage, mechanism isolation, literature/empirical/standard ranges, upper-/lower-bound logic, or sensitivity/ablation design.
 
-Use tables and schematics for parameters, geometry/architecture, experiment matrices, and data-processing flow. Prose should explain why the design isolates the target mechanism.
+Use tables for repeated parameter or experiment-matrix fields when they improve lookup or comparison; use schematics for geometry, architecture, and data-processing flow when spatial or process relations matter. Keep simple facts in prose. Prose should explain why the design isolates the target mechanism.
 
 When Methods includes a workflow figure, schematic, scenario/setup diagram, parameter table, or experiment matrix, do not let it stand alone after a heading. First state what design decision or reproducibility question the visual answers; after the visual, explain the key modules, variables, controlled factors, or boundaries needed for the reader to use it.
 
 ### Results
 
-Organize by research question and evidence clusters:
+Use the evidence-cluster protocol in `results-and-discussion.md`. For an engineering paper, a useful default order is:
 
 1. Baseline fairness and absolute performance.
 2. Primary outcome supporting the central claim.
 3. Mechanism, parameter, condition, or design-choice effect.
 4. Robustness, sensitivity, ablation, or supplementary diagnostic.
 
-For each result subsection:
+Each subsection should follow:
 
 ```text
 Question or claim -> evidence cluster -> main observation with numbers -> comparison to baseline -> short interpretation -> local boundary.
 ```
 
-Avoid describing every metric or every figure. Use the few metrics and figures needed to answer the question. If several figures show the same pattern across conditions, metrics, or robustness checks, synthesize them as one evidence cluster instead of writing separate figure-by-figure paragraphs.
-
-For each main Results figure or table, use `lead-in -> visual/evidence cluster -> uptake`: introduce the question or comparison before the visual, then interpret the key trend, number, anomaly, or boundary after it. Do not start a result subsection with a figure/table or place several visuals back-to-back without prose that frames and interprets them.
+Use only the metrics and visuals needed to answer the question. Synthesize similar figures as one evidence cluster, and apply `lead-in -> visual/evidence cluster -> uptake` rather than starting a subsection with a display or placing visuals back-to-back.
 
 ### Discussion
 
-Discussion should not re-report tables. It should explain:
+Use the Discussion architecture in `results-and-discussion.md`. The engineering-specific discussion should explain:
 
 - Why the main pattern occurred (mechanism).
 - Why findings agree or conflict with prior literature.
@@ -146,15 +144,7 @@ Common engineering boundaries to state where they matter (do not repeat the full
 
 ### Conclusions
 
-Use a short cap plus a compact set of supported findings. For high-level journal style, use compact paragraphs by default rather than numbered findings:
-
-Opening paragraph: restate the problem, method, and main study object/scenarios or comparisons.
-
-Middle paragraph(s): synthesize the main answer, strongest quantitative result, mechanism/condition, and practical/modeling implication as coherent prose. Use only as many findings as the evidence supports; short/single-experiment papers may need fewer, and complex papers may need more.
-
-Closing paragraph: state the most consequential boundary and a direct future direction.
-
-Use numbered findings only when the user explicitly asks for numbered conclusions, the provided target journal/template explicitly requires them, or the output is for a thesis/course report that requires enumerated findings. Do not infer numbering merely because the manuscript is a Chinese, engineering, or applied paper.
+Use the paragraph-style conclusion pattern in `top-journal-section-patterns.md`: restate the problem and scope, synthesize only the supported findings, then state the contribution/implication and most consequential boundary. Use numbered findings only when the user, target template, or thesis/course format explicitly requires them; do not infer numbering from a Chinese, engineering, or applied context.
 
 Do not introduce new citations, methods, or data.
 
@@ -169,7 +159,7 @@ Engineering empirical/simulation papers usually need a clear evidence chain. Use
 | Mechanism or condition contrast | Figure/table cluster | Condition transfer, load-case comparison, ablation, or characteristic curve |
 | Robustness and boundary | Table/figure/supplement | Robustness, sensitivity, uncertainty, proxy metrics, or supplementary diagnostic |
 
-Only keep figures in the main text if they support a core claim. Similar charts, secondary metrics, and exploratory checks belong in supplements or compact tables unless they change the main interpretation.
+Only keep figures in the main text if they support a core claim. Similar charts, secondary metrics, and exploratory checks belong in supplements unless they change the main interpretation; use a compact table only when exact values or repeated comparisons remain necessary.
 
 Every retained figure/table should have a manuscript anchor: a preceding sentence or paragraph that tells the reader why to inspect it, and a following sentence or paragraph that states what it contributes to the argument.
 
