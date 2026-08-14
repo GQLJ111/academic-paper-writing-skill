@@ -77,7 +77,7 @@ Use this repair order:
 3. Move a genuine study-level limitation to the appropriate Discussion or Limitations section.
 4. Delete the remaining defensive explanation.
 
-Inspect phrases such as `需要说明的是`, `需要指出的是`, `值得注意的是`, `由于条件限制`, `为避免误解`, `本研究仅适用于`, `本文并不意味着`, `Although this study does not ...`, `It should be noted that ...`, `To avoid overinterpretation ...`, and `This result should not be interpreted as ...`. Do not ban these phrases mechanically; retain them only when the sentence adds a precise, scientifically necessary condition rather than generic self-defense.
+Treat phrases such as `需要说明的是`, `需要指出的是`, `值得注意的是`, `由于条件限制`, `为避免误解`, `本研究仅适用于`, `本文并不意味着`, `Although this study does not ...`, `It should be noted that ...`, `To avoid overinterpretation ...`, and `This result should not be interpreted as ...` as audit triggers, not recommended manuscript templates. Do not ban them mechanically: retain one only when it adds a precise, scientifically necessary condition; otherwise integrate the condition into the claim or delete the defensive sentence.
 
 ## Abstract Checklist
 

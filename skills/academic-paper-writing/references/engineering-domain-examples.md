@@ -1,14 +1,14 @@
 # Engineering Domain Examples
 
-Use this reference when you need a concrete, field-appropriate framing for an engineering manuscript. Each example shows the same reasoning moves: a controlled central claim, a specific gap, a contribution pattern, method-boundary statements, and safe vs. unsafe claim forms. Adapt the slots to the user's actual study; do not copy numbers or findings.
+Use this reference when you need a concrete, field-appropriate framing for an engineering manuscript. Each example shows the same reasoning moves: a controlled central claim, a specific gap, a contribution pattern, method and scope statements when needed, and safe vs. unsafe claim forms. Adapt the slots to the user's actual study; do not copy numbers or findings.
 
 The shared pattern across all domains:
 
 ```text
 Central claim: <effect/mechanism> depends on <factor>, <condition>, and <scope> — not a blanket "X always improves Y".
 Gap: prior work did <X> under <assumption Y>, leaving <mechanism/condition Z> unresolved.
-Contribution: distinguish / decompose / test / quantify, with a stated boundary.
-Boundary: "under the tested conditions / simulated setting / specimen set", not universal.
+Contribution: distinguish / decompose / test / quantify, with an applicable scope when needed.
+Applicable scope (if needed): "under the tested conditions / simulated setting / specimen set", not universal.
 ```
 
 ---

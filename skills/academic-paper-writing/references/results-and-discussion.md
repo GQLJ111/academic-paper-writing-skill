@@ -66,7 +66,7 @@ Arrange retained visuals by comparison logic and readability, not by file name, 
 
 Treat a multi-panel composition as one manuscript display with ordered `(a)`, `(b)`, `(c)` labels and one caption that explains the role of every panel. Where comparison is valid, align units, axis ranges, colors, line styles, legend semantics, and condition ordering. Never shrink labels or data marks merely to force side-by-side placement. Target-journal and template constraints override generic layout preferences. When a target template is known, use single-column width only if the complete display remains legible; otherwise use double-column/full-width placement. In a Markdown draft, record the intended arrangement as a layout note rather than pretending that physical placement has been implemented.
 
-## Observation vs Interpretation
+## Observation, Interpretation, and Scope Integration
 
 Observation:
 
@@ -80,11 +80,13 @@ Interpretation:
 This suggests that the redesigned module reduces processing delay under the tested operating condition.
 ```
 
-Boundary:
+When a scope condition is necessary, integrate it into the observation or interpretation. Use the following as an alternative wording, not an additional sentence:
 
 ```text
-The result should not be interpreted as evidence of robustness under untested workloads or hardware platforms.
+Under the tested workload and hardware platform, configuration A reduces the average response time from 12.4 ms to 9.8 ms compared with the baseline.
 ```
+
+Do not add a separate `Boundary:` paragraph when the applicable condition is already stated in the claim, method, heading, or caption. Genuine study-level limitations belong in Discussion or Limitations.
 
 ## Defensive-Writing Gate
 
