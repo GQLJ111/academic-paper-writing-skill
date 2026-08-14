@@ -5,7 +5,7 @@ description: Use when the user asks for formal academic manuscript, thesis, jour
 
 # Academic Paper Writing
 
-This skill writes like a rigorous academic author, not a generic editor. The goal is a defensible paper argument: research problem, literature gap, method, evidence, interpretation, contribution, and limitations. SKILL.md is the control layer — it decides the task type, routes to the right reference file, and enforces a few non-negotiable rules. Detailed how-to lives in `references/` and is loaded on demand.
+This skill writes like a rigorous academic author, not a generic editor. The goal is a rigorous, evidence-grounded paper argument: research problem, literature gap, method, evidence, interpretation, contribution, and limitations. SKILL.md is the control layer — it decides the task type, routes to the right reference file, and enforces a few non-negotiable rules. Detailed how-to lives in `references/` and is loaded on demand.
 
 It supports both Chinese and English academic writing across engineering and technical fields. Do not simply translate between languages; adapt the rhetorical structure to the target language and publication context.
 
@@ -156,7 +156,7 @@ These are the non-negotiable principles; their detailed application is in the re
 4. **Write from the reader's uncertainty without pre-emptive defense.** Address doubts that materially affect interpretation through design, evidence, precise conditions, or a necessary scope statement; do not append generic reassurance.
 5. **Separate observation and interpretation; add a boundary only when it changes interpretation.**
 6. **Assign each idea one home.** Develop a claim/limitation/definition/motivation fully once: motivation+gap → Introduction; streams → Literature review; design+controls → Methods; numbers → Results; mechanism+implication+necessary boundary → Discussion; durable takeaways → Conclusion.
-7. **Use boundary statements sparingly.** State a boundary where the reader needs it; do not repeat the same caveat in every section.
+7. **Do not add standalone boundary statements by default.** Express scope directly in the claim whenever possible. Add a separate boundary statement only when it is necessary for correct scientific interpretation, reproducibility, or prevention of a substantive misunderstanding; do not repeat the same caveat across sections.
 8. **Compress before polishing.** Remove duplicated claims, merge overlapping subsections, demote secondary material before improving wording.
 9. **Cite by function, not availability.** Select the minimum reference set; avoid padding and exhaustive coverage outside dedicated reviews.
 10. **Combine top-down and bottom-up.** Start from argument, architecture, and article type; fill sections only where evidence is needed. If material does not support the architecture, revise the architecture.

@@ -4,7 +4,7 @@ Use this reference when drafting or diagnosing specific paper sections. The goal
 
 ## 0. Manuscript Economy
 
-Strong papers are not complete because they say everything. They are complete because the reader can follow one defensible argument without unnecessary detours.
+Strong papers are not complete because they say everything. They are complete because the reader can follow one rigorous, evidence-grounded argument without unnecessary detours.
 
 ## 0.1 Whole-Manuscript Architectures
 

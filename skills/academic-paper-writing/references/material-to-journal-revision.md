@@ -8,7 +8,7 @@ The goal is not to polish every sentence. The goal is to convert a full material
 
 ```text
 Material draft = preserves everything that might matter.
-Journal manuscript = presents only what is needed for one defensible argument.
+Journal manuscript = presents only what is needed for one rigorous, evidence-grounded argument.
 ```
 
 ## 2. Diagnosis First
