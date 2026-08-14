@@ -93,14 +93,14 @@ Delete or move text that does not perform one of these functions:
 - Justify design.
 - Report core evidence.
 - Interpret mechanism.
-- State boundary.
+- State a necessary scope condition, if one is needed.
 - Conclude contribution.
 
 If a paragraph only says the topic is important, repeats a known limitation, or previews what the next section will do without adding logic, delete or compress it.
 
 ### Step 5: Rebuild Results Around Claims
 
-Use the evidence-cluster protocol in `results-and-discussion.md`. Create one result block for each research question, claim, or mechanism, not one block for every figure, table, metric, or experiment log. Each block should state the claim, identify the joint evidence, report only the numbers needed, and retain the comparison, interpretation, and boundary required by that claim.
+Use the evidence-cluster protocol in `results-and-discussion.md`. Create one result block for each research question, claim, or mechanism, not one block for every figure, table, metric, or experiment log. Each block should state the claim, identify the joint evidence, report only the numbers needed, and retain the comparison and interpretation; add a scope condition only when required by the claim's scientific meaning.
 
 When several visuals tell the same story, synthesize them in one block; when a visual does not change the main interpretation, demote it to a caption, appendix, or supplement.
 
@@ -111,7 +111,7 @@ Discussion should contain:
 1. Mechanism synthesis.
 2. Relation to literature.
 3. Modeling or practical implication.
-4. Boundary and future work.
+4. Necessary scope condition and future work, when relevant.
 
 Move detailed result descriptions back to Results or delete them.
 
@@ -128,7 +128,7 @@ Use after structural compression.
 Patterns:
 
 - Replace "本文首先..., 其次..., 最后..." repeated across sections with direct topic sentences.
-- Replace long caveats with precise boundaries.
+- Replace long caveats with a precise scope condition only when it changes scientific interpretation.
 - Replace repeated "需要指出的是" with one integrated clause.
 - Replace "可以看出" with the actual observation.
 - Convert parameter prose to table references only when repeated fields make the table clearer than concise prose.

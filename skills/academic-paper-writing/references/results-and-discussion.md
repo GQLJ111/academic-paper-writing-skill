@@ -11,8 +11,8 @@ Question/topic sentence.
 Evidence cluster: one or more figures/tables/metrics that jointly answer the question.
 Main observation with only the numbers needed for the claim.
 Comparison to baseline.
-Mechanism interpretation.
-Boundary or caution.
+Interpretation or mechanism when supported.
+Scope condition only when scientifically necessary.
 Transition to next result.
 ```
 
@@ -24,7 +24,7 @@ For engineering papers, organize result subsections around the questions a revie
 - Does the primary result support the central claim?
 - Which mechanism, module, parameter, condition, or design choice drives the result?
 - Does the claim survive ablation, sensitivity, robustness, uncertainty, or harder conditions?
-- What boundary prevents overgeneralization?
+- Is a scope condition needed to interpret the claim correctly?
 
 These questions should shape the order of evidence. Do not use software output order, figure order, experiment log order, or metric order as the manuscript structure.
 
@@ -34,7 +34,7 @@ Use a `lead-in prose -> figure/table -> uptake prose` pattern for manuscript log
 
 - **Lead-in prose**: state the research question, claim, comparison, method decision, or reading focus before referring to the figure or table.
 - **Figure/table**: present the visual evidence, parameter matrix, workflow, scenario, or summary.
-- **Uptake prose**: interpret the key observation, important number, contrast, anomaly, boundary, or transition after the visual.
+- **Uptake prose**: interpret the key observation, important number, contrast, anomaly, necessary scope condition, or transition after the visual.
 
 Do not place a figure or table immediately after a Results subsection title without a sentence that tells the reader why it is being shown. Do not place two or more visuals back-to-back unless the manuscript text first defines them as one evidence cluster and then interprets the cluster afterward. A caption cannot carry the whole interpretation by itself.
 
@@ -86,6 +86,16 @@ Boundary:
 The result should not be interpreted as evidence of robustness under untested workloads or hardware platforms.
 ```
 
+## Defensive-Writing Gate
+
+Do not append a boundary or caution to every result paragraph. Before adding one, ask:
+
+1. Is the claim already scoped precisely by the sentence, heading, method, caption, or stated condition?
+2. Would omitting the scope condition change how a technically informed reader interprets the result?
+3. Can the claim be made precise by narrowing its wording instead of adding a separate disclaimer?
+
+If the claim is already precise, omit the extra boundary. If it is too broad, narrow the claim first. Add one concise scope statement only when it remains necessary for correct interpretation, reproducibility, or prevention of a substantive misunderstanding. Move genuine study limitations to Discussion or Limitations rather than repeating them locally.
+
 ## Figure and Table Rules
 
 - Every main figure should answer a question.
@@ -111,7 +121,7 @@ Before delivering Results, scan for these failure signs:
 - Unrelated panels are forced into one figure, or panel labels/axes become unreadable after composition.
 - Captions carry the actual interpretation while the text only points to figures.
 
-Fix by rewriting around `lead-in -> visual/evidence cluster -> uptake -> boundary`. Move secondary figures to captions, tables, appendix, or supplementary material when they do not change the main claim.
+Fix by rewriting around `lead-in -> visual/evidence cluster -> uptake`, adding a scope condition only when the Defensive-Writing Gate requires it. Move secondary figures to captions, tables, appendix, or supplementary material when they do not change the main claim.
 
 ## Discussion Section Jobs
 
@@ -140,9 +150,9 @@ Use **Results and Discussion / Results and Analysis / 结果与分析** when:
 - The paper is compact or applied, and each result can be interpreted immediately after the evidence.
 - A separate Discussion would mostly repeat result numbers.
 - The target journal or Chinese engineering style commonly combines result reporting and interpretation.
-- Each subsection can follow `question -> evidence -> observation -> interpretation -> boundary`.
+- Each subsection can follow `question -> evidence -> observation -> interpretation`, with a scope condition only when needed.
 
-Do not combine Results and Discussion by simply writing longer result paragraphs. A combined section still needs interpretation, mechanism, implication, and boundary statements; it just places them locally with the evidence instead of in a later conceptual section.
+Do not combine Results and Discussion by simply writing longer result paragraphs. A combined section still needs interpretation, mechanism, and implication statements; add a local boundary only when it changes the interpretation rather than as a routine disclaimer.
 
 If a draft already has both Results and Discussion, audit for duplication:
 

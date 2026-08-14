@@ -44,7 +44,7 @@ Use 2-4 contributions:
 
 1. **Conceptual contribution**: new distinction, framing, or mechanism.
 2. **Methodological contribution**: experiment design, decomposition, robustness, or scenario hierarchy.
-3. **Empirical/simulation finding**: key result with metric and boundary.
+3. **Empirical/simulation finding**: key result with metric and applicable condition when needed.
 4. **Practical implication**: what the finding means for deployment, modeling, or evaluation.
 
 ## Chinese Contribution Phrases

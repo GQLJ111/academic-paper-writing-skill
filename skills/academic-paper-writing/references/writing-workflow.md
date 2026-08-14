@@ -5,10 +5,10 @@
 Before drafting, state the paper in one sentence:
 
 ```text
-This paper investigates [object] under [context] using [method] to explain/test [mechanism or relationship], showing [main finding] with [boundary].
+This paper investigates [object] under [context] using [method] to explain/test [mechanism or relationship], showing [main finding] with [applicable scope when needed].
 ```
 
-If this sentence is vague, do not start full drafting. First clarify object, context, method, finding, and boundary.
+If this sentence is vague, do not start full drafting. First clarify object, context, method, finding, and any applicable scope needed for interpretation.
 
 ## Standard Section Jobs
 
@@ -32,13 +32,13 @@ If this sentence is vague, do not start full drafting. First clarify object, con
    Use 2-4 questions. Each result subsection should answer one question.
 
 3. **Map evidence to claims**
-   For each claim, identify exact supporting figure/table and boundary.
+   For each claim, identify the exact supporting figure/table and an applicable boundary only if one is needed.
 
 4. **Draft methods before results**
    Methods define what the results can legitimately claim.
 
 5. **Draft results as answer blocks**
-   Observation -> comparison -> interpretation -> boundary.
+   Observation -> comparison -> interpretation -> scope condition only when needed.
 
 6. **Draft introduction after results are clear**
    A strong introduction is easier once contributions are known.
@@ -66,5 +66,5 @@ Use transitions that narrow the logic:
 Existing studies show [known].
 However, [gap/uncertainty] remains.
 Therefore, this study [does X] to test [Y].
-The results show [finding], suggesting [implication] under [boundary].
+The results show [finding], suggesting [implication] under [applicable condition, if needed].
 ```

@@ -40,7 +40,7 @@ A sentence can be grammatically complete but still fail to communicate a usable 
 | Effect: `improve/reduce/affect` | Factor or intervention, affected object or metric, baseline/comparator, condition, and magnitude when supported |
 | Validation: `validate/verify` | Model or method being validated, data or baseline used, criterion or metric, and operating scope |
 | Comparison: `compare/outperform` | Compared alternatives, common metric, baseline, and matched conditions |
-| Inference: `show/indicate/suggest` | Concrete finding, supporting evidence, appropriate strength, and boundary |
+| Inference: `show/indicate/suggest` | Concrete finding, supporting evidence, appropriate strength, and applicable scope when needed |
 
 Required information may be distributed across adjacent sentences, an equation, a table, or a figure, but it must be explicit and easy to recover without guessing. Treat `该方法验证了有效性` or `The method was validated` as underspecified when the surrounding context does not already supply the validation target, evidence, criterion, and scope. Fill missing roles only from user evidence; otherwise narrow the statement or flag the exact missing input rather than inventing detail.
 
@@ -66,6 +66,19 @@ Common repairs:
 
 Do not delete legitimate logical signposts merely because they resemble these forms. Retain them when they identify a real contrast, scope condition, exception, or interpretation boundary that the sentence then states precisely.
 
+## Defensive-Writing Check
+
+For each sentence or paragraph, check whether its primary function is to anticipate criticism, justify an omission, explain why something was not done, defend a methodological choice, or repeatedly remind the reader of a limitation. Remove or rewrite it unless the information is necessary for scientific interpretation, reproducibility, or prevention of a substantive misunderstanding.
+
+Use this repair order:
+
+1. Narrow the claim to what the evidence directly supports.
+2. State a necessary experimental, modeling, or operating condition directly.
+3. Move a genuine study-level limitation to the appropriate Discussion or Limitations section.
+4. Delete the remaining defensive explanation.
+
+Inspect phrases such as `需要说明的是`, `需要指出的是`, `值得注意的是`, `由于条件限制`, `为避免误解`, `本研究仅适用于`, `本文并不意味着`, `Although this study does not ...`, `It should be noted that ...`, `To avoid overinterpretation ...`, and `This result should not be interpreted as ...`. Do not ban these phrases mechanically; retain them only when the sentence adds a precise, scientifically necessary condition rather than generic self-defense.
+
 ## Abstract Checklist
 
 An abstract should include:
@@ -75,7 +88,7 @@ An abstract should include:
 - Method/data/scenarios.
 - Key results, preferably quantitative.
 - Contribution or implication.
-- Boundary if the result is simulation/model-specific.
+- Scope condition only when it is needed to interpret a simulation/model-specific result.
 
 For Chinese journal abstracts, check the pacing:
 

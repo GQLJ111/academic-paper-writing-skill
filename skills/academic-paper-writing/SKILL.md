@@ -52,7 +52,7 @@ Choose one task mode. If multiple apply, handle the highest level first: full-pa
 | Verbose, repetitive, report-like, or thesis-like draft | Compression revision | Diagnosis table, keep/delete/merge/table/supplement decisions, revised outline or sample |
 | Literature review, related work, gap, or contribution framing | Synthesis mode | Thematic structure, gap logic, representative citation functions, draft text |
 | Methods, experiment, simulation, variables, formulas, equations, notation, metrics, model definitions, reproducibility | Methods mode | Design logic, variables/controls/metrics map, equation/notation needs, reproducibility details, prose or table-ready content |
-| Results, figures, tables, discussion, limitations, conclusion | Evidence-interpretation mode | Claim-evidence-boundary map, result/discussion separation, draft text |
+| Results, figures, tables, discussion, limitations, conclusion | Evidence-interpretation mode | Claim-evidence map, result/discussion separation, draft text; add scope notes only when needed |
 | Reviewer response, rebuttal, or response letter | Reviewer-response mode | Comment/action/location/response structure, with unresolved author-input flags |
 
 For small one-paragraph edits, keep the mode implicit but preserve its output contract. For substantial tasks, show the mode or pre-writing brief before final prose unless the user asks to skip planning.
@@ -78,9 +78,9 @@ Use the shape that matches the task mode (full templates in `references/manuscri
 - **Pre-writing brief**: article type, central claim, structure, contribution, evidence chain, citation strategy, material to omit.
 - **Structural diagnosis**: table of `Issue / Evidence in draft / Why it weakens the paper / Action`.
 - **Compression decision table**: classify material as keep / merge / delete / table / caption / appendix / supplement.
-- **Claim-evidence-citation map**: `Claim / User evidence / Citation function / Section / Boundary`.
+- **Claim-evidence-citation map**: `Claim / User evidence / Citation function / Section / Applicable scope or boundary (if needed)`.
 - **Equation/notation block**: role, LaTeX math, symbol definitions, units, scope/assumptions, manuscript link.
-- **Section draft**: publication-ready text first; short notes only for assumptions, unsupported claims, missing evidence, or boundary choices.
+- **Section draft**: publication-ready text first; short notes only for assumptions, unsupported claims, missing evidence, or scope choices when needed.
 - **Reviewer response**: preserve each comment, assign a stable ID, map the action, cite location or placeholder, then respond.
 
 Do not bury the answer under process notes. Diagnostic blocks should be short enough to improve the final text, not replace it.
@@ -95,6 +95,21 @@ Keep manuscript prose and author-facing commentary as two separate layers.
 When drafting, revising, or polishing manuscript text, do not add author-facing narration such as “下面将说明……”, “为了便于理解……”, “这句话可以理解为……”, “本段主要介绍……”, or “需要注意的是……” when the phrase only explains how to read the text or what the assistant changed. Replace it with the actual research object, relation, evidence, condition, or boundary; retain a signpost only when it carries real logical content.
 
 Do not expose the skill's routing, planning, grammatical parsing, audit labels, or revision rationale inside the paper. If the user requests manuscript-only output, begin with the manuscript text and suppress preambles, teaching explanations, and process summaries.
+
+## Anti-Defensive Manuscript Writing
+
+Do not write manuscript text as if replying in advance to an imagined reviewer. Prefer narrowing the claim itself over appending defensive explanations, disclaimers, or repeated caveats.
+
+State a limitation or scope condition only when it is scientifically necessary to:
+
+- correct the interpretation of the result;
+- define the applicable experimental, modeling, or operating condition;
+- support reproducibility; or
+- prevent a substantive misunderstanding.
+
+Do not add sentences merely to justify an omitted experiment, explain unavailable data, defend a methodological choice, emphasize what the study does not prove, or pre-empt possible criticism. Keep revision rationale, risk analysis, and reviewer-facing explanations in commentary.
+
+For detailed sentence-level checks and repair patterns, load `references/revision-and-polishing.md`.
 
 ## Reference Selection
 
@@ -114,7 +129,7 @@ Use the routing list below as the ownership map when several references mention 
 - Results, figure/table selection, multi-panel composition/layout, discussion, and limitations → operational evidence owner: `references/results-and-discussion.md`.
 - Whole-draft diagnosis, paper scoring, reviewer-style audit, what to revise first → `references/paper-quality-review.md`.
 - Target journal family or fit decisions → `references/target-journal-fit.md`.
-- Final polishing, logical diagnosis, sentence-level integrity repair, anti-meta/anti-teaching-style repair, abstract/title revision, reviewer response → revision owner: `references/revision-and-polishing.md`.
+- Final polishing, logical diagnosis, sentence-level integrity repair, anti-meta/anti-teaching-style and anti-defensive-writing repair, abstract/title revision, reviewer response → revision owner: `references/revision-and-polishing.md`.
 - Manuscript spine, claim-evidence-citation mapping, figure contracts, section-aware audit, pre-delivery checks → `references/manuscript-spine-and-audit.md`.
 - Academic terms, phrase banks, Chinese-English equivalents → `references/terminology-and-phrases.md`.
 - Turning a verbose material/thesis/report draft into a journal manuscript → `references/material-to-journal-revision.md`.
@@ -136,11 +151,11 @@ For **empirical/experimental/simulation/modeling/algorithm/technical papers**, c
 These are the non-negotiable principles; their detailed application is in the reference files.
 
 1. **Each section answers a job-specific question.** Introduction: why the problem matters and what gap remains. Literature review: what was done, how streams differ, what is unresolved. Methods: how the claim is tested or reproduced. Results: what evidence answers each question. Discussion: why results occurred, what they imply, where they do not apply. Conclusion: what was found and what contribution survives limitations.
-2. **Use claim-evidence-boundary.** Make a claim, tie it to evidence, state the boundary. For major claims, decide the citation function before attaching references.
+2. **Use claim-evidence-boundary selectively.** Make a claim and tie it to evidence; state an applicable boundary only when the evidence or wording requires it. For major claims, decide the citation function before attaching references.
 3. **No paper-shaped filler.** Avoid generic openings, literature laundry lists, exaggerated novelty, unsupported causal language, and conclusions that merely repeat figures.
-4. **Write from the reader's uncertainty.** Anticipate doubts: parameter validity, comparison fairness, robustness, external validity, missing baselines, interpretation limits.
-5. **Separate observation, interpretation, and boundary.**
-6. **Assign each idea one home.** Develop a claim/limitation/definition/motivation fully once: motivation+gap → Introduction; streams → Literature review; design+controls → Methods; numbers → Results; mechanism+implication+boundary → Discussion; durable takeaways → Conclusion.
+4. **Write from the reader's uncertainty without pre-emptive defense.** Address doubts that materially affect interpretation through design, evidence, precise conditions, or a necessary scope statement; do not append generic reassurance.
+5. **Separate observation and interpretation; add a boundary only when it changes interpretation.**
+6. **Assign each idea one home.** Develop a claim/limitation/definition/motivation fully once: motivation+gap → Introduction; streams → Literature review; design+controls → Methods; numbers → Results; mechanism+implication+necessary boundary → Discussion; durable takeaways → Conclusion.
 7. **Use boundary statements sparingly.** State a boundary where the reader needs it; do not repeat the same caveat in every section.
 8. **Compress before polishing.** Remove duplicated claims, merge overlapping subsections, demote secondary material before improving wording.
 9. **Cite by function, not availability.** Select the minimum reference set; avoid padding and exhaustive coverage outside dedicated reviews.
@@ -151,7 +166,7 @@ These are the non-negotiable principles; their detailed application is in the re
 14. **Choose the Discussion architecture deliberately** — standalone vs. `Results and Discussion`; never a Discussion that only restates numbers.
 15. **Select, compose, and anchor every main figure/table deliberately.** Use a visual only when it communicates a core comparison, pattern, structure, or reproducibility detail more clearly than prose. Group directly comparable visuals into a readable multi-panel figure; keep visuals serving different claims separate; use standalone or wider placement when density or aspect ratio requires it. Provide lead-in prose before and uptake prose after; captions support but do not replace explanation.
 16. **Formalize engineering definitions when prose is ambiguous.** Define every symbol and unit needed for reproducibility. Never invent formulas, parameters, or values without user evidence — ask or flag a candidate definition.
-17. **Run a light pre-delivery audit** for unsupported claims, citation padding, result/discussion mixing, conclusion overclaiming, repeated caveats, section overlap, unnecessary tables, figure/table redundancy, figure-by-figure dumping, orphaned or unreadable visual layouts, equation dumping, sentence-skeleton defects, and grammatically complete but semantically underspecified claims. Fix what you can; flag the exact missing input otherwise.
+17. **Run a light pre-delivery audit** for unsupported claims, citation padding, result/discussion mixing, conclusion overclaiming, repeated caveats, defensive padding, section overlap, unnecessary tables, figure/table redundancy, figure-by-figure dumping, orphaned or unreadable visual layouts, equation dumping, sentence-skeleton defects, and grammatically complete but semantically underspecified claims. Fix what you can; flag the exact missing input otherwise.
 18. **Default to paragraph-style journal conclusions.** Do not number conclusions as `(1)/(2)/(3)`, `1./2./3.`, or `第一/第二/第三` unless the user asks, a target journal/template requires it, or the output is a thesis/course report requiring enumerated findings.
 19. **Preserve sentence-skeleton and information integrity.** Give every sentence a clear or context-recoverable subject and an explicit predicate; supply any object, result, complement, condition, or boundary required by the intended meaning; attach modifiers and references unambiguously. Do not force every Chinese sentence to contain all six traditional components or repeat “本文”; recast or split a sentence when its core subject-predicate relation is hard to identify. Treat a claim as incomplete when verbs such as validate, improve, affect, compare, or outperform lack a specific object, metric, baseline, condition, or scope in the sentence or its immediately connected context.
 

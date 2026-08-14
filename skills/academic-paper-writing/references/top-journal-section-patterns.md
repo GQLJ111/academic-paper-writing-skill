@@ -48,7 +48,7 @@ Compress the whole paper into a problem-gap-method-result-contribution chain.
 2. Objective or research question.
 3. Method, data, scenarios, or experiment design.
 4. Key results with the most important quantitative evidence.
-5. Contribution, implication, and boundary.
+5. Contribution, implication, and an applicable scope condition when needed.
 ```
 
 This is the logical chain, not a paragraph quota. For Chinese journal-style abstracts, prefer a compact three-block rhythm unless the target journal requires another format:
@@ -64,7 +64,7 @@ Chinese abstracts commonly fit around 250-300 Chinese characters or roughly 8-11
 ### English Abstract Skeleton
 
 ```text
-Although [topic] has been widely studied, [specific gap] remains unclear. This study investigates [research question] by [method/design]. [Key setup: data/scenarios/variables]. Results show that [finding 1 with metric], while [finding 2 or contrast]. Further analysis indicates that [mechanism/robustness]. These findings suggest that [contribution/implication], with results interpreted under [boundary].
+Although [topic] has been widely studied, [specific gap] remains unclear. This study investigates [research question] by [method/design]. [Key setup: data/scenarios/variables]. Results show that [finding 1 with metric], while [finding 2 or contrast]. Further analysis indicates that [mechanism/robustness]. These findings suggest that [contribution/implication]. Add the applicable scope only when omitting it would change the scientific interpretation.
 ```
 
 ### Chinese Abstract Skeleton
@@ -78,7 +78,7 @@ Although [topic] has been widely studied, [specific gap] remains unclear. This s
 - Background longer than method and results combined.
 - “The results are significant” without actual result.
 - New claims not shown in the paper.
-- Repeating all limitations. Include only the boundary needed to prevent the main overclaim.
+- Repeating all limitations. Include a scope statement only when it is needed to prevent a substantive overclaim.
 
 ## 3. Introduction
 
@@ -254,7 +254,7 @@ To isolate [target effect], [potential confounder] was controlled by [design cho
 - No seed/repetition/statistical statement for stochastic experiments.
 - Repeating the research background.
 - Explaining every minor parameter in full prose when a table plus one rationale sentence is clearer.
-- Apologizing for controlled assumptions. State what was controlled, why, and where the boundary is discussed.
+- Defending controlled assumptions at length. State what was controlled and why; discuss the resulting scope only if it changes interpretation.
 - Listing test conditions without saying why those conditions were chosen.
 
 ## 8. Experiments / Case Study
@@ -296,7 +296,7 @@ Answer research questions with evidence, not just describe figures.
 ### Result Paragraph Pattern
 
 ```text
-[Question or claim]. The relevant evidence comes from [figure/table/evidence cluster]. The main observation is [result with number]. Compared with [baseline], [change]. This suggests [mechanism/interpretation]. However, [boundary/caution].
+[Question or claim]. The relevant evidence comes from [figure/table/evidence cluster]. The main observation is [result with number]. Compared with [baseline], [change]. This suggests [mechanism/interpretation] when supported. Add [scope condition] only when the claim would otherwise be scientifically overbroad or misinterpreted.
 ```
 
 Use figure or table numbers only after the claim has been stated. If several figures answer the same question, synthesize them as one evidence cluster rather than writing separate figure-led paragraphs.
@@ -320,6 +320,7 @@ For the complete `lead-in prose -> visual/evidence cluster -> uptake prose` prot
 - Treating averages over only completed/successful samples as overall system performance when completion or success rates differ.
 - Explaining full mechanisms that belong in Discussion.
 - Ending every paragraph with the same general boundary statement.
+- Adding a disclaimer merely because a result has an unstated imaginable limitation; narrow the claim first.
 - Duplicating figure captions in the text.
 - Letting figure numbers determine the Results structure.
 
@@ -335,8 +336,8 @@ Explain why results matter beyond the immediate numbers.
 Mechanism: why did this pattern occur?
 Literature connection: how does it align or differ from prior work?
 Implication: what should modelers/practitioners/researchers do differently?
-Boundary: where should this not be generalized?
-Future work: what extension follows from the boundary?
+Scope when needed: where would broader generalization change the interpretation?
+Future work: what extension follows from a consequential limitation?
 ```
 
 ### Strong Discussion Sentence
@@ -396,7 +397,7 @@ For high-level journal manuscripts, especially English or top-journal style pape
 ```text
 Opening paragraph: restate the research problem, method, and core experimental/material scope in one or two sentences.
 Middle paragraph(s): synthesize the key supported findings as a coherent argument without forcing a fixed count or numbered list.
-Closing paragraph: state the contribution/implication, most consequential boundary, and direct future extension.
+Closing paragraph: state the contribution/implication, and add the most consequential scope condition or future extension only when needed.
 ```
 
 The opening paragraph is a light methods-and-scope recap, not a second abstract. It may mention the study object, method, scenarios/data, and comparison groups, but should not repeat the literature gap or full experimental matrix.

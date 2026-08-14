@@ -47,7 +47,7 @@ Before writing around a major figure, table, or equation group, define:
 | Composition and width | Standalone or multi-panel; `1 x 2`, `2 x 1`, `1 x 3`, `2 x 2` without empty decorative slots; single-column, double-column, or full-width? |
 | Readability and consistency | Will panel labels, axes, units, legends, colors, and ordering remain legible and comparable? |
 | Comparison baseline | What is the fair comparison group or reference condition? |
-| Boundary | What cannot be concluded from this display? |
+| Applicable scope (if any) | What cannot be concluded from this display, if omitting it would mislead the reader? |
 | Manuscript home | Results, Methods, Discussion, supplement, caption, or appendix |
 | Prose anchors | What lead-in text introduces this item, and what uptake text interprets it afterward? |
 
@@ -60,7 +60,7 @@ Use section-specific revision targets:
 | Section | Must Do | Must Avoid |
 |---|---|---|
 | Title | Name object, method/angle, and context | Vague "study/research on" titles or unsupported outcome claims |
-| Abstract | State problem, method, key results, contribution, and one boundary | Literature review, vague significance, new claims not in paper |
+| Abstract | State problem, method, key results, contribution, and a necessary scope condition when needed | Literature review, vague significance, new claims not in paper, or routine disclaimers |
 | Introduction | Move from importance to specific gap and contribution | Broad openings, paper-by-paper literature lists, task-list contributions |
 | Literature Review | Synthesize streams and expose the unresolved issue | One paragraph per paper, citation inventory, no synthesis paragraph |
 | Methods | Make design, variables, controls, metrics, formulas/notation when needed, and reproducibility clear | Manual-like prose; tables that have not passed the Table Necessity Gate; equations that do not remove ambiguity in a metric, model, objective, or constraint |
@@ -86,6 +86,7 @@ Before delivering substantial prose, run this quick audit:
 | Conclusion boundary | Conclusion claims practical impact beyond evidence | Convert to supported finding or implication |
 | Repetition | Same gap, limitation, or motivation fully explained in multiple sections | Choose one home and shorten later mentions |
 | Meta/explanatory padding | Text tells the reader or author how to understand, follow, or edit the manuscript instead of stating research content | Delete it or recast it as a claim, relation, evidence, condition, or boundary |
+| Defensive padding | Text anticipates criticism, justifies an omission or method choice, or repeats a caveat without changing scientific interpretation | Narrow the claim, state the necessary condition directly, move a genuine study-level limitation to Discussion/Limitations, or delete the sentence |
 | Unnecessary table/visual | The display has no lookup, comparison, reproducibility, trend, relationship, or mechanism function beyond simple prose | Remove it, convert it to prose, or move secondary material to the supplement |
 | Figure/table redundancy | A figure and table repeat the same evidence without distinct reader tasks | Keep the stronger form; retain both only when pattern and exact-value functions are independently necessary |
 | Figure/table role | Figure is described but not tied to a research question | Rewrite around the question and claim |
@@ -108,12 +109,12 @@ Manuscript spine:
 - Specific gap:
 - Core contribution:
 - Evidence chain:
-- Claim boundary:
+- Applicable claim scope (if needed):
 ```
 
 ```text
 Claim-evidence-citation map:
-| Claim | Evidence anchor | Citation function | Section | Boundary |
+| Claim | Evidence anchor | Citation function | Section | Applicable scope (if needed) |
 |---|---|---|---|---|
 ```
 

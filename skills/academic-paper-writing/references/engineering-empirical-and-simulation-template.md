@@ -17,7 +17,7 @@ Main comparisons (baselines):
 Primary metrics:
 Main evidence clusters:
 Reference strategy:
-Boundary not to overclaim:
+Applicable scope or boundary (only if needed):
 Material to move out of main text:
 ```
 
@@ -118,10 +118,10 @@ Use the evidence-cluster protocol in `results-and-discussion.md`. For an enginee
 Each subsection should follow:
 
 ```text
-Question or claim -> evidence cluster -> main observation with numbers -> comparison to baseline -> short interpretation -> local boundary.
+Question or claim -> evidence cluster -> main observation with numbers -> comparison to baseline -> short interpretation -> scope condition only when scientifically necessary.
 ```
 
-Use only the metrics and visuals needed to answer the question. Synthesize similar figures as one evidence cluster, and apply `lead-in -> visual/evidence cluster -> uptake` rather than starting a subsection with a display or placing visuals back-to-back.
+Use only the metrics and visuals needed to answer the question. Synthesize similar figures as one evidence cluster, and apply `lead-in -> visual/evidence cluster -> uptake`; do not append a routine boundary sentence. Narrow an overbroad claim first, then add a concise scope condition only if necessary.
 
 ### Discussion
 

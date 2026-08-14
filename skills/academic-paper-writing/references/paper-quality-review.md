@@ -131,6 +131,7 @@ If a paragraph's function cannot be named, it is usually filler or duplicated ma
 | Discussion repeats numbers | Results/discussion roles blurred | Move numbers to Results; keep mechanism in Discussion |
 | Standalone Discussion feels thin | No cross-result mechanism, literature comparison, implication, or boundary synthesis | Merge into Results and Discussion or keep only a short limitations paragraph |
 | Paragraphs feel correct but heavy | Multiple paragraphs perform the same function | Reverse-outline the section and merge or delete repeated roles |
+| Defensive prose dominates | Sentences anticipate criticism, justify omissions or method choices, or repeat caveats without changing interpretation | Narrow the claim, state the necessary condition directly, move a genuine limitation to Discussion/Limitations, or delete the defense |
 | Conclusion repeats abstract | No durable finding hierarchy | Reduce to the smallest supported finding set |
 
 ## 4. General Engineering Reviewer Checks
