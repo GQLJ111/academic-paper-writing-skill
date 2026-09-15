@@ -1,6 +1,6 @@
 ---
 name: academic-paper-writing
-description: Use when the user asks for formal academic manuscript, thesis, journal, SCI/SSCI, or conference-paper writing; section drafting or revision; abstract/introduction/methods/results/discussion/conclusion rewriting; methods, formulas, equations, notation, metrics, or model-definition writing; academic polishing; sentence-level grammar repair; incomplete, unclear, or semantically underspecified sentences; missing subjects or predicates; manuscript compression; reviewer response or rebuttal; or Chinese requests such as 论文润色、病句修改、语句不通顺、残句、缺主语、缺谓语、改摘要、改引言、期刊论文压缩、审稿意见回复.
+description: Use ONLY when the user explicitly asks for this skill by name (`academic-paper-writing`, `$academic-paper-writing`, or 学术论文写作). Do not use for general writing, document drafting, text revision, translation, polishing, or academic-looking tasks unless the user names this skill.
 ---
 
 # Academic Paper Writing
@@ -11,9 +11,9 @@ It supports both Chinese and English academic writing across engineering and tec
 
 ## Trigger Boundary
 
-Use this skill when the user asks for it by name, or for clear academic-writing requests that do not name it: "revise this abstract", "make this introduction more journal-like", "compress this manuscript", "write a reviewer response", "论文润色", "改摘要", "改引言", "期刊论文压缩", "学术论文改写", "审稿意见回复".
+Use this skill ONLY when the user explicitly asks for it by name, such as `$academic-paper-writing`, `academic-paper-writing`, or `学术论文写作`.
 
-Do not trigger for casual research brainstorming, literature reading, experiment planning, simulation setup, code work, or general technical discussion unless the user frames the task as academic writing or asks for this skill.
+Do not trigger for general writing, document drafting, text revision, translation, research brainstorming, literature reading, experiment planning, simulation setup, code work, or technical discussion, even if the content looks academic.
 
 ## First Decisions
 
